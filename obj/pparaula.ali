@@ -1,0 +1,148 @@
+V "GNAT Lib v2013"
+A -gnatA
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK
+
+U pparaula%b		pparaula.adb		054c8893 NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.sequential_io%s
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U pparaula%s		pparaula.ads		1f7d5a3a EE NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.wide_wide_characters%s  a-zchara.ads	a-zchara.ali
+W ada.wide_wide_characters.handling%s  a-zchhan.adb  a-zchhan.ali
+
+D ada.ads		20130417131022 3ffc8e18
+D a-except.ads		20130417131018 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-sequio.ads		20130417131020 7b5d9d38
+D a-sequio.adb		20130417131020 f458c90c
+D a-stream.ads		20130417131020 2ca4ee37
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-unccon.ads		20130417131022 f9eb8f06
+D a-zchara.ads		20130417131022 21c8f2b2
+D a-zchhan.ads		20130417131022 c300220e
+D interfac.ads		20130417131026 cb4a8015
+D i-cstrea.ads		20130417131026 8128536b
+D pparaula.ads		20160314115336 e4108de0
+D pparaula.adb		20160317181302 a26c6d9f
+D system.ads		20130417131036 5fc8ae56
+D s-conca4.ads		20130417131028 025fe3be
+D s-crtl.ads		20130417131028 dfcfca61
+D s-exctab.ads		20130417131028 66e51330
+D s-ficobl.ads		20130417131028 55a71d43
+D s-fileio.ads		20130417131028 45ce2f0f
+D s-finmas.ads		20130417131028 b95bb341
+D s-finroo.ads		20130417131028 4ff27390
+D s-imgint.ads		20130417131030 02dbe0c2
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-secsta.ads		20130417131032 eea35a36
+D s-sequio.ads		20130417131032 fc7560a7
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-traent.ads		20130417131032 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 15|1r6 1r19 2r5 2r18 16|1r6 1r19 2r5 127r10
+X 5 a-sequio.ads
+43k13*Sequential_IO 158e22 16|1w23
+X 9 a-textio.ads
+49K13*Text_IO 471e16 15|1w10 2r9 16|1w10 2r9 127r14
+52P9*File_Type(369R9) 15|26r29 82r16 16|17r30
+53n23*In_File{53E9} 16|92r26
+53n32*Out_File{53E9} 16|19r20
+86U14*Create 16|19s10
+92U14*Open 16|92s7
+98U14*Close 16|105s7
+183V13*End_Of_File{boolean} 16|118s20
+205U14*Get 16|119s13
+207U14*Put 16|22s13
+249U14*Get_Line 16|127s22
+263U14*Put_Line 16|97s10 99s10 126s10
+294X4*Name_Error 16|96r12
+295X4*Use_Error 16|98r12
+X 11 a-zchara.ads
+16K13*Wide_Wide_Characters 18e29 15|1r23 2r22
+X 12 a-zchhan.ads
+16K34*Handling 131e38 15|1w44 2r43
+X 15 pparaula.ads
+9K9*pparaula 86l5 86e13 16|4b14 141l5 141t13
+15i4*MAXIM{integer} 17r44
+17I12*tllargaria{integer} 18r28 18r48 31r47 72r19 16|44r47
+18I12*rang_lletres{17I12} 36r52 67r33 16|57r52 112r21
+21R9*tparaula 24r25 26r47 28r28 31r30 33r26 36r29 38r28 46r33 46r55 57r57
+. 70c9 73e14 16|7r25 17r48 27r28 44r30 50r26 57r29 62r28 78r33 78r55 109r57
+24U14*put 24>18 16|7b14 13l8 13t11
+24r18 p{21R9} 16|7b18 9r33
+26U14*put 26=18 26>40 16|17b14 24l8 24t11
+26p18 f{9|52P9} 16|17b19 19m17 22r17
+26r40 p{21R9} 16|17b41 21r22 22r20
+28V14*"="{boolean} 28>18 28>21 16|27b14 39l9 39t11
+28r18 a{21R9} 16|27b18 29r10 30r22 31r16
+28r21 b{21R9} 16|27b21 29r24 31r32
+31V13*llargaria{17I12} 31>23 16|44b13 47l8 47t17
+31r23 p{21R9} 16|44b23 46r14
+33V13*buida{boolean} 33>19 16|50b13 53l8 53t13
+33r19 p{21R9} 16|50b19 52r14
+36V13*caracter{character} 36>22 36>39 16|57b13 60l8 60t16
+36r22 p{21R9} 16|57b22 59r14
+36i39 posicio{18I12} 16|57b39 59r24
+38V13*toString{string} 38>22 16|62b13 73l8 73t16
+38r22 p{21R9} 16|62b22 63r26 66r19 67r24 70r57
+46U14*copiar 46<21 46>43 16|78b14 81l8 81t14
+46r21 desti{21R9} 16|78b21 80m7
+46r43 origen{21R9} 16|78b43 80r14
+48R9*OrigenParaules 51r32 53r32 55r36 57r34 79c9 84e14 16|84r32 90r32 103r36
+. 109r34
+51U14*open 51<19 16|84b14 88l8 88t12
+51r19 origen{48R9} 16|84b19 86m7 87m7
+53U14*open 53<19 53>48 16|90b14 100l8 100t12
+53r19 origen{48R9} 16|90b19 92m12 92r12 93m7 94m7
+53s48 nom{string} 16|90b48 92r34
+55U14*close 55=20 16|103b14 106l8 106t13
+55r20 origen{48R9} 16|103b20 105m13 105r13
+57U14*get 57=18 57<50 16|109b14 139l8 139t11
+57r18 origen{48R9} 16|109b18 115r10 118r32 119r17
+57r50 p{21R9} 16|109b50 122m13 124m10 132m13
+67A9 taula_lletres(character)<integer> 71r17
+71a7*lletres{67A9} 16|22r22 31r18 31r34 59r16 67r26 122m15 132m15
+72i7*llargaria{17I12} 16|9r35 21r24 29r12 29r26 30r24 46r16 52r16 63r28 66r21
+. 70r59 124m12
+80b7*defitxer{boolean} 16|86m14 93m14 115r17
+82p7*fitxer{9|52P9} 16|92m19 105m20 118r39 119r24
+83e7*lletra{character} 16|87m14 94m14
+X 16 pparaula.adb
+9i11 i{integer}
+21i14 x{integer} 22r30
+30i14 x{integer} 31r26 31r42
+63a7 paraula{string} 67m10 70r28
+66i11 x{integer} 67r18 67r34
+110e7 letra{character} 119m31 120r23 122r30 129m10 131r16 132r30 135m13
+111i7 idx{integer} 116m10 121m13 121r19 122r23 124r23 128m24 132r23 133m13
+. 133r19
+111i12 idx_linea{integer} 128m10 129r36 131r43 134m13 134r24 135r39
+112a7 linea{string} 127m31 129r18 129r24 135r21 135r27
+113i7 num_car{natural} 127m37 131r32
+

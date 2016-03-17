@@ -1,0 +1,81 @@
+V "GNAT Lib v2013"
+M P W=b
+A -gnatA
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK
+
+U main%b		main.adb		6cde7c37 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.sequential_io%s
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W pparaula%s		pparaula.adb		pparaula.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D ada.ads		20130417131022 3ffc8e18
+D a-except.ads		20130417131018 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-sequio.ads		20130417131020 7b5d9d38
+D a-sequio.adb		20130417131020 f458c90c
+D a-stream.ads		20130417131020 2ca4ee37
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-unccon.ads		20130417131022 f9eb8f06
+D a-zchara.ads		20130417131022 21c8f2b2
+D a-zchhan.ads		20130417131022 c300220e
+D interfac.ads		20130417131026 cb4a8015
+D i-cstrea.ads		20130417131026 8128536b
+D main.adb		20160317185458 cbfe993b
+D pparaula.ads		20160314115336 e4108de0
+D system.ads		20130417131036 5fc8ae56
+D s-crtl.ads		20130417131028 dfcfca61
+D s-exctab.ads		20130417131028 66e51330
+D s-ficobl.ads		20130417131028 55a71d43
+D s-fileio.ads		20130417131028 45ce2f0f
+D s-finmas.ads		20130417131028 b95bb341
+D s-finroo.ads		20130417131028 4ff27390
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-secsta.ads		20130417131032 eea35a36
+D s-sequio.ads		20130417131032 fc7560a7
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-traent.ads		20130417131032 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 15|1r6 1r25 2r5 17r4 21r7
+X 5 a-sequio.ads
+43k13*Sequential_IO 158e22 15|1w10
+X 9 a-textio.ads
+49K13*Text_IO 471e16 15|1w29 2r9 17r8 21r11
+249U14*Get_Line 15|17s16 21s19
+263U14*Put_Line 15|16s4 20s7 27s10 34s7
+X 15 main.adb
+4U11*Main 4b11 38l5 38t9
+7a4 nom_fichero{string} 21m28 22r19
+8a4 letra{string} 17m25 19r7 31r10
+9i4 last_letra{natural} 17m31 19r16 31r19
+10i4 last_fichero{natural} 21m40 22r34
+12r4 origen{16|48R9} 22m12 25m11 25r11 28m14 28r14 32m12
+13r4 p{16|21R9} 25m19 26r23 27r28 28m22
+X 16 pparaula.ads
+9K9*pparaula 15|1w38 2r18 16|86e13
+21R9*tparaula 15|13r7 16|73e14
+33V13*buida{boolean} 15|26s17
+38V13*toString{string} 15|27s19
+48R9*OrigenParaules 15|12r12 16|84e14
+51U14*open 15|32s7
+53U14*open 15|22s7
+57U14*get 15|25s7 28s10
+
