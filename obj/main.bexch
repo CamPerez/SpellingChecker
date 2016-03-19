@@ -1,0 +1,21 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\Usuario\Desktop\SpellingChecker\diccionario.gpr
+20160317214942
+[BOUND OBJECT FILES]
+C:\Users\Usuario\Desktop\SpellingChecker\obj\pparaula.o
+C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_simple.o
+C:\Users\Usuario\Desktop\SpellingChecker\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\Usuario\Desktop\SpellingChecker\obj\
+-LC:\Users\Usuario\Desktop\SpellingChecker\obj\
+-LC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
+-static
+-static-libgcc
+C:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
+-Wl,--stack=0x2000000

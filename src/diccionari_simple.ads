@@ -1,13 +1,9 @@
 --llista implementada amb cursors.
+with pparaula;
+use pparaula;
 
-generic
 
-   size: positive;
-   --type pparaula is private;
-   with function "<" (x1, x2: in item) return boolean;
-   with function ">" (x1, x2: in item) return boolean;
-
-package d_diccionari_simple is
+package diccionari_simple is
 
    type diccionari is limited private;
 
@@ -15,17 +11,16 @@ package d_diccionari_simple is
    space_overflow: exception;
 
    procedure buit (d: out diccionari);
-   procedure posa (d: in out diccionari;p: in tparaula);
-   function existeix (d: in diccionari; p: in tparaula) return boolean;
+   procedure posa (d: in out diccionari; paraula: in tparaula);
+   function existeix (d: in diccionari; paraula: in tparaula) return boolean;
 
 private
 
-   type mem_space is array(1..size) of tparaula;
+   type index is new integer range 0..100;
 
    type diccionari is
       record
-         a: mem_space;
-         n: natural;
+         first: index;
       end record;
 
-end d_diccionari_simple;
+end diccionari_simple;

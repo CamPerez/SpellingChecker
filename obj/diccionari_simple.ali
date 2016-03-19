@@ -1,0 +1,100 @@
+V "GNAT Lib v2015"
+A -gnatA
+A -mtune=generic
+A -march=pentiumpro
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U diccionari_simple%b	diccionari_simple.adb	68a8bda6 OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W pparaula%s		pparaula.adb		pparaula.ali
+
+U diccionari_simple%s	diccionari_simple.ads	8b465f0b EE OO PK IL
+W ada.tags%s		a-tags.adb		a-tags.ali
+W pparaula%s		pparaula.adb		pparaula.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D a-zchara.ads		20150518132148 21c8f2b2 ada.wide_wide_characters%s
+D a-zchhan.ads		20150518132148 28d85bc4 ada.wide_wide_characters.handling%s
+D diccionari_simple.ads	20160318203304 6f56d2eb diccionari_simple%s
+D diccionari_simple.adb	20160318203914 db831779 diccionari_simple%b
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D pparaula.ads		20160317214942 e4108de0 pparaula%s
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 11|1r6 1r23
+X 6 a-textio.ads
+49K13*Text_IO 471e16 11|1w10 1r27
+X 10 diccionari_simple.ads
+6K9*diccionari_simple 19E9 26l5 26e22 11|4b14 84l5 84t22
+8R9*diccionari 13r27 14r30 15r29 21c9 24e17 11|40r27 45r30 63r29
+10X4*bad_use
+11X4*space_overflow 11|29r28
+13U14*buit 13<20 11|40b14 43l8 43t12
+13r20 d{8R9} 11|40b20 42m7
+14U14*posa 14=20 14>42 11|45b14 60l8 60t12
+14r20 d{8R9} 11|45b20 47m28 47r28
+14r42 paraula{14|21R9} 11|45b42 50r15
+15V13*existeix{boolean} 15>23 15>41 11|63b13 77l8 77t16
+15r23 d{8R9} 11|63b23 64r28
+15r41 paraula{14|21R9} 11|63b41 71r26
+19I9 index<integer> 23r17 11|9r16 12r28 12r43 15r10 19r16 19r31 22r10 26r30
+. 27r9 34r38 46r13 47r14 64r14 65r12
+23i10*first{19I9} 11|42m9 47m30 64m30
+X 11 diccionari_simple.adb
+6R9 block 10e17 12r58
+8r10*p{14|21R9} 71r24
+9i10*next{10|19I9} 20m16 22m22 30r31 30m43 36m13 55r22 56r23 58m16 70r24
+. 72r27
+12A9 mem_space(6R9)<10|19I9> 14r8
+14a4 ms{12A9} 20m10 22m7 30r22 30m37 36m7 50m7 55r16 56r17 58m10 70r16 71r16
+. 72r19
+15i4 free{10|19I9} 23m7 29r10 30r10 30m16 30r25 36r19 37m7
+17U14 prep_mem_space 17b14 24l8 24t22 82s4
+19i11 i<integer> 20r13 20r22
+26V13 get_block{10|19I9} 26b13 32l8 32t17 49s11
+27i7 r{10|19I9} 30m7 30r40 31r14
+34U14 release_block 34b14 34=28 38l8 38t21
+34i28 r{10|19I9} 36r10 37r14 37m17
+46i7 r{10|19I9} 49m7 50r10 52r17 58r22
+46i10 p{10|19I9} 54m10 55r19 56m13 56r20 58r13
+47i7 first{10|19I9} 51r10 52r10 54r13
+64i7 first{10|19I9} 67r10 69r16
+65i7 idx{10|19I9} 69m10 70r19 71r19 72m13 72r22
+X 14 pparaula.ads
+9K9*pparaula 10|2w6 3r5 11|2w6 3r5 14|86e13
+21R9*tparaula 10|14r54 15r53 11|8r13 45r54 63r53 14|73e14
+28V14*"="{boolean} 11|71s25
+

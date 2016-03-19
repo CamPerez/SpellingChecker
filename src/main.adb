@@ -1,5 +1,5 @@
-with Ada.Sequential_IO, Ada.Text_IO, pparaula;
-use Ada.Text_IO, pparaula;
+with Ada.Sequential_IO, Ada.Text_IO, pparaula, diccionari_simple;
+use Ada.Text_IO, pparaula, diccionari_simple;
 
 procedure Main is
 
@@ -11,6 +11,7 @@ procedure Main is
 
    origen: OrigenParaules;
    p: tparaula;
+   dicc: diccionari;
 
 begin
    put_line("Escriba 'f' para realizar la lectura desde un fichero o 't' si desea realizar la lectura desde teclado");
@@ -22,9 +23,12 @@ begin
       open(origen,nom_fichero(1..last_fichero));
       --open(origen,"diccionario.dic");
 
+      buit(dicc);
+
       get(origen, p);
       while not buida(p) loop
          put_line(toString(p));
+
          get(origen, p);
       end loop;
 
