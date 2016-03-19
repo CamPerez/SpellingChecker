@@ -48,7 +48,7 @@ package body diccionari_simple is
    begin
       r:= get_block;
       ms(r):=(paraula,0);
-      if first=0 then
+      if first=0 then  --la lista esta vacia
          first:=r;
       else
          p:=first;
