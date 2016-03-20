@@ -10,7 +10,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK
 
-U diccionari_simple%b	diccionari_simple.adb	68a8bda6 OO PK IL
+U diccionari_simple%b	diccionari_simple.adb	97857cf4 OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -18,7 +18,7 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 W interfaces%s		interfac.ads		interfac.ali
 W pparaula%s		pparaula.adb		pparaula.ali
 
-U diccionari_simple%s	diccionari_simple.ads	8b465f0b EE OO PK IL
+U diccionari_simple%s	diccionari_simple.ads	746b9e59 EE OO PK IL
 W ada.tags%s		a-tags.adb		a-tags.ali
 W pparaula%s		pparaula.adb		pparaula.ali
 W system%s		system.ads		system.ali
@@ -35,11 +35,11 @@ D a-textio.ads		20130417131022 386df5d4
 D a-unccon.ads		20130417131022 f9eb8f06
 D a-zchara.ads		20130417131022 21c8f2b2
 D a-zchhan.ads		20130417131022 c300220e
-D diccionari_simple.ads	20160318203304 6f56d2eb
-D diccionari_simple.adb	20160319162642 db831779
+D diccionari_simple.ads	20160319170642 6f56d2eb
+D diccionari_simple.adb	20160319170642 db831779
 D interfac.ads		20130417131026 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D pparaula.ads		20160317214942 e4108de0
+D pparaula.ads		20160320122012 1b3d4cb2
 D system.ads		20130417131036 5fc8ae56
 D s-crtl.ads		20130417131028 dfcfca61
 D s-exctab.ads		20130417131028 66e51330

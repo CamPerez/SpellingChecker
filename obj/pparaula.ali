@@ -12,7 +12,7 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK
 
-U pparaula%b		pparaula.adb		4e567b18 NE OO PK IL
+U pparaula%b		pparaula.adb		da2c397f NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.sequential_io%s
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -20,7 +20,7 @@ W system.concat_3%s	s-conca3.adb		s-conca3.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U pparaula%s		pparaula.ads		1f7d5a3a EE NE OO PK IL
+U pparaula%s		pparaula.ads		e0509b68 EE NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W ada.wide_wide_characters%s  a-zchara.ads	a-zchara.ali
@@ -40,8 +40,8 @@ D a-zchara.ads		20130417131022 21c8f2b2
 D a-zchhan.ads		20130417131022 c300220e
 D interfac.ads		20130417131026 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D pparaula.ads		20160317214942 e4108de0
-D pparaula.adb		20160319165328 e9769e14
+D pparaula.ads		20160320122012 1b3d4cb2
+D pparaula.adb		20160320123222 82211d21
 D system.ads		20130417131036 5fc8ae56
 D s-conca3.ads		20130417131028 762a026a
 D s-crtl.ads		20130417131028 dfcfca61
@@ -65,22 +65,23 @@ D s-traent.ads		20130417131032 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 15|1r6 1r19 2r5 2r18 16|1r6 1r19 2r5 126r10
+16K9*Ada 19e8 15|1r6 1r19 2r5 2r18 16|1r6 1r19 2r5 134r10
 X 5 a-sequio.ads
 43k13*Sequential_IO 158e22 16|1w23
 X 9 a-textio.ads
-49K13*Text_IO 471e16 15|1w10 2r9 16|1w10 2r9 126r14
+49K13*Text_IO 471e16 15|1w10 2r9 16|1w10 2r9 134r14
 52P9*File_Type(369R9) 15|26r29 82r16 16|17r30
 53n23*In_File{53E9} 16|91r26
 53n32*Out_File{53E9} 16|19r20
 86U14*Create 16|19s10
 92U14*Open 16|91s7
 98U14*Close 16|104s7
-183V13*End_Of_File{boolean} 16|117s20
-205U14*Get 16|118s13
+171V13*End_Of_Line{boolean} 16|123s16 128s38
+183V13*End_Of_File{boolean} 16|116s20
+205U14*Get 16|117s13
 207U14*Put 16|22s13
-249U14*Get_Line 16|126s22
-263U14*Put_Line 16|96s10 98s10 125s10
+249U14*Get_Line 16|134s22
+263U14*Put_Line 16|96s10 98s10 133s10
 294X4*Name_Error 16|95r12
 295X4*Use_Error 16|97r12
 X 11 a-zchara.ads
@@ -88,10 +89,10 @@ X 11 a-zchara.ads
 X 12 a-zchhan.ads
 16K34*Handling 131e38 15|1w44 2r43
 X 15 pparaula.ads
-9K9*pparaula 86l5 86e13 16|4b14 140l5 140t13
+9K9*pparaula 86l5 86e13 16|4b14 148l5 148t13
 15i4*MAXIM{integer} 17r44
 17I12*tllargaria{integer} 18r28 18r48 31r47 72r19 16|44r47
-18I12*rang_lletres{17I12} 36r52 67r33 16|57r52 111r21
+18I12*rang_lletres{17I12} 36r52 67r33 16|57r52 111r28
 21R9*tparaula 24r25 26r47 28r28 31r30 33r26 36r29 38r28 46r33 46r55 57r57
 . 70c9 73e14 16|7r25 17r48 27r28 44r30 50r26 57r29 62r28 77r33 77r55 108r57
 24U14*put 24>18 16|7b14 13l8 13t11
@@ -123,15 +124,18 @@ X 15 pparaula.ads
 53s48 nom{string} 16|89b48 91r34
 55U14*close 55=20 16|102b14 105l8 105t13
 55r20 origen{48R9} 16|102b20 104m13 104r13
-57U14*get 57=18 57<50 16|108b14 138l8 138t11
-57r18 origen{48R9} 16|108b18 114r10 117r32 118r17
-57r50 p{21R9} 16|108b50 121m13 123m10 131m13
+57U14*get 57=18 57<50 57=67 57=90 57=115 16|108b14 146l8 146t11
+57r18 origen{48R9} 16|108b18 114r10 116r32 117r17 123r28 128r50
+57r50 p{21R9} 16|108b50 127m13 130m10 139m13
+57i67 linia{integer} 16|108b67 120m16 120r24
+57i90 columna{integer} 16|108b90 119m16 131m10 131r20
+57b115 siguiente{boolean} 16|108b115 118r16 121m16 124m16
 67A9 taula_lletres(character)<integer> 71r17
-71a7*lletres{67A9} 16|22r22 31r18 31r34 59r16 67r26 121m15 131m15
+71a7*lletres{67A9} 16|22r22 31r18 31r34 59r16 67r26 127m15 139m15
 72i7*llargaria{17I12} 16|9r35 21r24 29r12 29r26 30r24 46r16 52r16 63r28 66r21
-. 70r45 123m12
+. 70r45 130m12
 80b7*defitxer{boolean} 16|85m14 92m14 114r17
-82p7*fitxer{9|52P9} 16|91m19 104m20 117r39 118r24
+82p7*fitxer{9|52P9} 16|91m19 104m20 116r39 117r24 123r35 128r57
 83e7*lletra{character} 16|86m14 93m14
 X 16 pparaula.adb
 9i11 i{integer}
@@ -139,10 +143,10 @@ X 16 pparaula.adb
 30i14 x{integer} 31r26 31r42
 63a7 paraula{string} 67m10 70r14
 66i11 x{integer} 67r18 67r34
-109e7 letra{character} 118m31 119r23 121r30 128m10 130r16 131r30 134m13
-110i7 idx{integer} 115m10 120m13 120r19 121r23 123r23 127m24 131r23 132m13
-. 132r19
-110i12 idx_linea{integer} 127m10 128r36 130r43 133m13 133r24 134r39
-111a7 linea{string} 126m31 128r18 128r24 134r21 134r27
-112i7 num_car{natural} 126m37 130r32
+109e7 letra{character} 117m31 127r30 128r23 136m10 138r16 139r30 142m13
+110i7 idx{integer} 115m10 126m13 126r19 127r23 130r23 135m24 139r23 140m13
+. 140r19
+110i12 idx_linea{integer} 135m10 136r50 138r43 141m13 141r24 142r53
+111a7 lineaTeclado{string} 134m31 136r18 136r31 142r21 142r34
+112i7 num_car{natural} 134m44 138r32
 

@@ -105,33 +105,41 @@ package body pparaula is
    end close;
 
    -- Procediment per llegir una paraula des d'un origen de paraules
-   procedure get(origen : in out OrigenParaules; p: out tparaula) is
+   procedure get(origen : in out OrigenParaules; p: out tparaula; linia: in out integer; columna: in out integer; siguiente: in out boolean) is -- siguiente: para indicar si la siguiente palabra es una nueva linea
       letra: character;
       idx, idx_linea: integer;
-      linea: String(rang_lletres);
+      lineaTeclado: String(rang_lletres);
       num_car: natural;
    begin
       if origen.defitxer = true then -- Si la lectura es fa des de un fitxer
          idx:=0;
-         --Get(origen.fitxer,letra);
          while not End_Of_File(origen.fitxer) loop -- Mentre no arribi al final del fitxer i no sigui final de paraula
             Get(origen.fitxer,letra);
-            exit when letra = ' ';
+            if siguiente=true then
+               columna:= 0; --Reiniciamos columna a 0 si la siguiente era la ultima de su linea
+               linia:= linia + 1; --Aumentamos en una la linea si la siguiente era el final de linea
+               siguiente:=false;
+            end if;
+            if End_Of_Line(origen.fitxer) then
+               siguiente:=true;
+            end if;
             idx:= idx+1;
             p.lletres(idx):= letra;
+            exit when letra = ' ' or End_Of_Line(origen.fitxer);
          end loop;
          p.llargaria:=idx;
+         columna:= columna + 1;
       else -- Si la lectura es fa des de teclat
          put_line("Escriu la paraula:");
-         Ada.Text_IO.Get_Line(linea,num_car);
+         Ada.Text_IO.Get_Line(lineaTeclado,num_car);
          idx_linea:=0; idx:=1;
-         letra:= linea(linea'First+idx_linea);
+         letra:= lineaTeclado(lineaTeclado'First+idx_linea);
 
          while letra /=' ' and num_car /= idx_linea loop
             p.lletres(idx):= letra;
             idx:= idx+1;
             idx_linea:=idx_linea+1;
-            letra:= linea(linea'First+idx_linea);
+            letra:= lineaTeclado(lineaTeclado'First+idx_linea);
          end loop;
       end if;
 

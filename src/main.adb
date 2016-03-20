@@ -15,6 +15,10 @@ procedure Main is
    p: tparaula;
    dicc: diccionari;
 
+   linia: integer:= 1;
+   columna: integer:= 1;
+   siguiente: boolean:= false;
+
 begin
    put_line("Escriba 'f' para realizar la lectura desde un fichero o 't' si desea realizar la lectura desde teclado");
    Ada.Text_IO.Get_Line(letra,last_letra);
@@ -27,11 +31,11 @@ begin
 
       buit(dicc);
 
-      get(origen, p);
+      get(origen, p, linia, columna, siguiente);
       while not buida(p) loop
          --put_line(toString(p));
 	 posa(dicc, p); --creamos la estructura de diccionario
-         get(origen, p);
+         get(origen, p, linia, columna, siguiente);
       end loop;
 
       close(origen); --cerramos el fichero del diccionario
@@ -42,16 +46,22 @@ begin
 
       Start_Time:= Ada.Calendar.Clock; --Cogemos el tiempo antes de empezar el proceso de comparación
 
-      get(origen, p);
+
+      linia:= 1; --Reiniciamos el valor de la linea para el nuevo fichero
+      columna:= 0; --Reiniciamos el valor de la columna para el nuevo fichero
+      siguiente:= false; --Reiniciamos el valor del booleano siguiente para el nuevo fichero
+
+      get(origen, p, linia, columna, siguiente);
       while not buida(p) loop
          if existeix(dicc, p)=false then--miramos si NO existe la palabra dentro del diccionario
-            put_line(toString(p));
+            put_line(toString(p) & " - linia: " & linia'Img & " - columna: " & columna'Img);
          end if;
-         get(origen, p);
+         get(origen, p, linia, columna, siguiente);
       end loop;
 
+      Put_Line("");
       Put_line("Ha tardado: ");
-      Put_Line(Duration'Image(Ada.Calendar.Clock - Start_Time)); -- Imprimimos el tiempo que ha tardado
+      Put_Line(Duration'Image(Ada.Calendar.Clock - Start_Time) & " segundos"); -- Imprimimos el tiempo que ha tardado
 
       close(origen); --cerramos el fichero de texto
 
