@@ -14,7 +14,7 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK
 
-U main%b		main.adb		bd5aab86 NE OO SU
+U main%b		main.adb		191993a6 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.sequential_io%s
@@ -44,8 +44,8 @@ D a-zchhan.ads		20130417131022 c300220e
 D diccionari_simple.ads	20160319170642 6f56d2eb
 D interfac.ads		20130417131026 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D main.adb		20160320123008 526c31bf
-D pparaula.ads		20160320122012 1b3d4cb2
+D main.adb		20160320155812 f62f099f
+D pparaula.ads		20160320123724 1b3d4cb2
 D system.ads		20130417131036 5fc8ae56
 D s-conca2.ads		20130417131028 fbd0f2fc
 D s-conca5.ads		20130417131028 1039cea1
@@ -82,7 +82,7 @@ X 6 a-sequio.ads
 X 10 a-textio.ads
 49K13*Text_IO 471e16 17|1w29 2r9 24r8 28r11 44r11
 249U14*Get_Line 17|24s16 28s19 44s19
-263U14*Put_Line 17|23s4 27s7 43s7 57s13 62s7 63s7 64s7 71s7
+263U14*Put_Line 17|23s4 27s7 43s7 57s14 62s7 63s7 64s7 71s7
 X 14 diccionari_simple.ads
 6K9*diccionari_simple 26e22 17|1w62 2r42
 8R9*diccionari 24e17 17|16r10
@@ -99,7 +99,7 @@ X 17 main.adb
 12i4 last_fichero{natural} 28m45 29r39 44m46 45r40
 14r4 origen{18|48R9} 29m12 34m11 34r11 38m14 38r14 41m13 41r13 45m12 54m11
 . 54r11 59m14 59r14 66m13 66r13 69m12
-15r4 p{18|21R9} 34m19 35r23 37r21 38m22 54m19 55r23 56r28 57r31 59m22
+15r4 p{18|21R9} 34m19 35r23 37r21 38m22 54m19 55r23 56r28 57r32 59m22
 16r4 dicc{14|8R9} 32m12 37m15 37r15 56r22
 18i4 linia{integer} 34m22 34r22 38m25 38r25 50m7 54m22 54r22 57r51 59m25
 . 59r25
@@ -110,7 +110,7 @@ X 18 pparaula.ads
 9K9*pparaula 17|1w52 2r32 18|86e13
 21R9*tparaula 17|15r7 18|73e14
 33V13*buida{boolean} 17|35s17 55s17
-38V13*toString{string} 17|57s22
+38V13*toString{string} 17|57s23
 48R9*OrigenParaules 17|14r12 18|84e14
 51U14*open 17|69s7
 53U14*open 17|29s7 45s7

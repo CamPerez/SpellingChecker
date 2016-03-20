@@ -95,7 +95,7 @@ package body pparaula is
       when Name_Error =>
          put_line("El fichero no se encuentra.");
       when Use_Error =>
-         put_line("Petó");
+         put_line("Fallo de uso");
    end open;
 
    -- Procediment per tancar l'origen de les paraules
@@ -123,9 +123,10 @@ package body pparaula is
             if End_Of_Line(origen.fitxer) then
                siguiente:=true;
             end if;
+            exit when letra = ' ';
             idx:= idx+1;
             p.lletres(idx):= letra;
-            exit when letra = ' ' or End_Of_Line(origen.fitxer);
+            exit when End_Of_Line(origen.fitxer);
          end loop;
          p.llargaria:=idx;
          columna:= columna + 1;

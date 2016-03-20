@@ -10,7 +10,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK
 
-U diccionari_simple%b	diccionari_simple.adb	97857cf4 OO PK IL
+U diccionari_simple%b	diccionari_simple.adb	7e657d01 OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -36,10 +36,10 @@ D a-unccon.ads		20130417131022 f9eb8f06
 D a-zchara.ads		20130417131022 21c8f2b2
 D a-zchhan.ads		20130417131022 c300220e
 D diccionari_simple.ads	20160319170642 6f56d2eb
-D diccionari_simple.adb	20160319170642 db831779
+D diccionari_simple.adb	20160320155242 3263168c
 D interfac.ads		20130417131026 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D pparaula.ads		20160320122012 1b3d4cb2
+D pparaula.ads		20160320123724 1b3d4cb2
 D system.ads		20130417131036 5fc8ae56
 D s-crtl.ads		20130417131028 dfcfca61
 D s-exctab.ads		20130417131028 66e51330
@@ -62,7 +62,7 @@ X 1 ada.ads
 X 7 a-textio.ads
 49K13*Text_IO 471e16 12|1w10 1r27
 X 11 diccionari_simple.ads
-6K9*diccionari_simple 26l5 26e22 12|4b14 84l5 84t22
+6K9*diccionari_simple 26l5 26e22 12|4b14 90l5 90t22
 8R9*diccionari 13r27 14r30 15r29 21c9 24e17 12|40r27 45r30 63r29
 10X4*bad_use
 11X4*space_overflow 12|29r28
@@ -71,22 +71,22 @@ X 11 diccionari_simple.ads
 14U14*posa 14=20 14>42 12|45b14 60l8 60t12
 14r20 d{8R9} 12|45b20 47m28 47r28
 14r42 paraula{15|21R9} 12|45b42 50r15
-15V13*existeix{boolean} 15>23 15>41 12|63b13 77l8 77t16
+15V13*existeix{boolean} 15>23 15>41 12|63b13 83l8 83t16
 15r23 d{8R9} 12|63b23 64r28
-15r41 paraula{15|21R9} 12|63b41 71r26
+15r41 paraula{15|21R9} 12|63b41 71r26 76r23
 19I9 index<integer> 23r17 12|9r16 12r28 12r43 15r10 19r16 19r31 22r10 26r30
 . 27r9 34r38 46r13 47r14 64r14 65r12
 23i10*first{19I9} 12|42m9 47m30 64m30
 X 12 diccionari_simple.adb
 6R9 block 10e17 12r58
-8r10*p{15|21R9} 71r24
+8r10*p{15|21R9} 71r24 76r21
 9i10*next{11|19I9} 20m16 22m22 30r31 30m43 36m13 55r22 56r23 58m16 70r24
-. 72r27
+. 74r27
 12A9 mem_space(6R9)<11|19I9> 14r8
 14a4 ms{12A9} 20m10 22m7 30r22 30m37 36m7 50m7 55r16 56r17 58m10 70r16 71r16
-. 72r19
+. 74r19 76r13
 15i4 free{11|19I9} 23m7 29r10 30r10 30m16 30r25 36r19 37m7
-17U14 prep_mem_space 17b14 24l8 24t22 82s4
+17U14 prep_mem_space 17b14 24l8 24t22 88s4
 19i11 i<integer> 20r13 20r22
 26V13 get_block{11|19I9} 26b13 32l8 32t17 49s11
 27i7 r{11|19I9} 30m7 30r40 31r14
@@ -96,9 +96,9 @@ X 12 diccionari_simple.adb
 46i10 p{11|19I9} 54m10 55r19 56m13 56r20 58r13
 47i7 first{11|19I9} 51r10 52r10 54r13
 64i7 first{11|19I9} 67r10 69r16
-65i7 idx{11|19I9} 69m10 70r19 71r19 72m13 72r22
+65i7 idx{11|19I9} 69m10 70r19 71r19 74m13 74r22 76r16
 X 15 pparaula.ads
 9K9*pparaula 11|2w6 3r5 12|2w6 3r5 15|86e13
 21R9*tparaula 11|14r54 15r53 12|8r13 45r54 63r53 15|73e14
-28V14*"="{boolean} 12|71s25
+28V14*"="{boolean} 12|71s25 76s22
 

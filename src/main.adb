@@ -54,7 +54,7 @@ begin
       get(origen, p, linia, columna, siguiente);
       while not buida(p) loop
          if existeix(dicc, p)=false then--miramos si NO existe la palabra dentro del diccionario
-            put_line(toString(p) & " - linia: " & linia'Img & " - columna: " & columna'Img);
+             put_line(toString(p) & " - fila: " & linia'Img & " - columna: " & columna'Img);
          end if;
          get(origen, p, linia, columna, siguiente);
       end loop;

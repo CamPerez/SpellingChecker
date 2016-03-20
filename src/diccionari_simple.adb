@@ -52,7 +52,7 @@ package body diccionari_simple is
          first:=r;
       else
          p:=first;
-         while ms(p).next /=0 loop
+         while ms(p).next /=0 loop            
             p:= ms(p).next;
          end loop;
          ms(p).next:=r;
@@ -68,10 +68,16 @@ package body diccionari_simple is
       else
          idx:= first;
          while ms(idx).next /=0 loop
-            if ms(idx).p=paraula then return true; end if;
+            if ms(idx).p=paraula then                
+               return true; 
+            end if;
             idx:= ms(idx).next;
-         end loop;
-         return false;
+         end loop;      
+         if ms(idx).p=paraula then                
+            return true; 
+         else            
+            return false;
+         end if;
       end if;
 
    end existeix;
@@ -82,4 +88,3 @@ begin
    prep_mem_space;
 
 end diccionari_simple;
-
