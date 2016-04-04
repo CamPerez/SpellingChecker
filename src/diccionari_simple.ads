@@ -1,8 +1,8 @@
 with pparaula;
 use pparaula;
 
---  generic
---     max: natural;
+generic
+   max: natural;
 package diccionari_simple is
 
    type diccionari is limited private;
@@ -16,7 +16,7 @@ package diccionari_simple is
 
 private
 
-   type index is new integer range 0..100;
+   type index is new integer range 0..max;
    type mem_space is array(index range 1..index'last) of tparaula;
 
    type diccionari is

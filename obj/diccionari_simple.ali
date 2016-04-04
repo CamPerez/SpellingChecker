@@ -1,92 +1,81 @@
-V "GNAT Lib v2013"
+V "GNAT Lib v2015"
 A -gnatA
+A -mtune=generic
+A -march=pentiumpro
 P ZX
 
 RN
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
 RV NO_IO
-RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
-RV NO_ELABORATION_CODE
-RV SPARK
+RV SPARK_05
 
-U diccionari_simple%b	diccionari_simple.adb	f4f50bb0 NE OO PK IL
+U diccionari_simple%b	diccionari_simple.adb	238f5fd8 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
-W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W interfaces%s		interfac.ads		interfac.ali
 W pparaula%s		pparaula.adb		pparaula.ali
 
-U diccionari_simple%s	diccionari_simple.ads	2567d30c EE OO PK IL
-W ada.tags%s		a-tags.adb		a-tags.ali
+U diccionari_simple%s	diccionari_simple.ads	f21d8764 BN EE NE OO PK GE IL
 W pparaula%s		pparaula.adb		pparaula.ali
-W system%s		system.ads		system.ali
-W system.exception_table%s  s-exctab.adb	s-exctab.ali
-W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-D ada.ads		20130417131022 3ffc8e18
-D a-except.ads		20130417131018 10fcae55
-D a-finali.ads		20130417131020 52ecdc1b
-D a-ioexce.ads		20130417131020 8b9de6cd
-D a-stream.ads		20130417131020 2ca4ee37
-D a-tags.ads		20130417131022 6c0509d0
-D a-textio.ads		20130417131022 386df5d4
-D a-unccon.ads		20130417131022 f9eb8f06
-D a-zchara.ads		20130417131022 21c8f2b2
-D a-zchhan.ads		20130417131022 c300220e
-D diccionari_simple.ads	20160321112158 78ce3972
-D diccionari_simple.adb	20160321112154 e9ff2d68
-D interfac.ads		20130417131026 cb4a8015
-D i-cstrea.ads		20130417131026 8128536b
-D pparaula.ads		20160321113232 5da9ea7e
-D system.ads		20130417131036 5fc8ae56
-D s-crtl.ads		20130417131028 dfcfca61
-D s-exctab.ads		20130417131028 66e51330
-D s-ficobl.ads		20130417131028 55a71d43
-D s-finmas.ads		20130417131028 b95bb341
-D s-finroo.ads		20130417131028 4ff27390
-D s-parame.ads		20130417131032 b6e20cc0
-D s-pooglo.ads		20130417131032 542f33d0
-D s-soflin.ads		20130417131032 24c8153c
-D s-stache.ads		20130417131032 596fc1b4
-D s-stalib.ads		20130417131032 f78bcf95
-D s-stoele.ads		20130417131032 facd7d98
-D s-stoele.adb		20130417131032 afc5dc80
-D s-stopoo.ads		20130417131032 7b8fbeee
-D s-traent.ads		20130417131032 5221ee41
-D s-unstyp.ads		20130417131034 6ae15c76
-D s-wchcon.ads		20130417131034 bfeb2e3d
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D a-zchara.ads		20150518132148 21c8f2b2 ada.wide_wide_characters%s
+D a-zchhan.ads		20150518132148 28d85bc4 ada.wide_wide_characters.handling%s
+D diccionari_simple.ads	20160404101750 afb46d1a diccionari_simple%s
+D diccionari_simple.adb	20160404094542 e9ff2d68 diccionari_simple%b
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D pparaula.ads		20160404094542 5da9ea7e pparaula%s
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 19e8 12|1r6 1r23
-X 7 a-textio.ads
-49K13*Text_IO 471e16 12|1w10 1r27
-X 11 diccionari_simple.ads
-6K9*diccionari_simple 28l5 28e22 12|4b14 36l5 36t22
-8R9*diccionari 13r27 14r30 15r29 22c9 26e17 12|6r27 12r30 24r29
+16K9*Ada 19e8 11|1r6 1r23
+X 6 a-textio.ads
+49K13*Text_IO 471e16 11|1w10 1r27
+X 10 diccionari_simple.ads
+5i4 max{natural} 19r39
+6k9*diccionari_simple 5z4 19E9 28l5 28e22 11|4b14 36l5 36t22
+8R9*diccionari 13r27 14r30 15r29 22c9 26e17 11|6r27 12r30 24r29
 10X4*bad_use
-11X4*space_overflow 12|20r38
-13U14*buit 13<20 12|6b14 10l8 10t12
-13r20 d{8R9} 12|6b20 7m24 7r24
-14U14*posa 14=20 14>42 12|12b14 21l8 21t12
-14r20 d{8R9} 12|12b20 13m24 13r24 14m28 14r28 16r23
-14r42 p{15|21R9} 12|12b42 16r26 17r25
-15V13*existeix{boolean} 15>23 15>41 12|16s14 24b13 34l8 34t16
-15r23 d{8R9} 12|24b23 25r24 26r28
-15r41 p{15|21R9} 12|24b41 29r18
-19I9 index<integer> 20r28 20r43 25r13 12|7r10 13r10 25r10
-20A9 mem_space(15|21R9)<19I9> 24r13 12|14r10 26r10
-24a10*a{20A9} 12|14m30 26m30
-25i10*n{19I9} 12|7m26 13m26 25m26
-X 12 diccionari_simple.adb
-7i7 n{11|19I9} 9r7
-13i7 n{11|19I9} 17r10 17r14 17r21
-14a7 a{11|20A9} 17r19
-25i7 n{11|19I9}
-26a7 a{11|20A9} 28r16 29r13
+11X4*space_overflow 11|20r38
+13U14*buit 13<20 11|6b14 10l8 10t12
+13r20 d{8R9} 11|6b20 7m24 7r24
+14U14*posa 14=20 14>42 11|12b14 21l8 21t12
+14r20 d{8R9} 11|12b20 13m24 13r24 14m28 14r28 16r23
+14r42 p{14|21R9} 11|12b42 16r26 17r25
+15V13*existeix{boolean} 15>23 15>41 11|16s14 24b13 34l8 34t16
+15r23 d{8R9} 11|24b23 25r24 26r28
+15r41 p{14|21R9} 11|24b41 29r18
+19I9 index<integer> 20r28 20r43 25r13 11|7r10 13r10 25r10
+20A9 mem_space(14|21R9)<19I9> 24r13 11|14r10 26r10
+24a10 a{20A9} 11|14m30 26m30
+25i10 n{19I9} 11|7m26 13m26 25m26
+X 11 diccionari_simple.adb
+7i7 n{10|19I9} 9r7
+13i7 n{10|19I9} 17r10 17r14 17r21
+14a7 a{10|20A9} 17r19
+25i7 n{10|19I9}
+26a7 a{10|20A9} 28r16 29r13
 28i11 x<integer> 29r15
-X 15 pparaula.ads
-9K9*pparaula 11|1w6 2r5 12|2w6 3r5 15|86e13
-21R9*tparaula 11|14r48 15r47 20r58 12|12r48 24r47 15|73e14
-28V14*"="{boolean} 12|29s17
+X 14 pparaula.ads
+9K9*pparaula 10|1w6 2r5 11|2w6 3r5 14|86e13
+21R9*tparaula 10|14r48 15r47 20r58 11|12r48 24r47 14|73e14
+28V14*"="{boolean} 11|29s17
 

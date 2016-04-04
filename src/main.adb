@@ -1,16 +1,8 @@
 with Ada.Sequential_IO, Ada.Text_IO, Ada.Calendar, pparaula, diccionari_simple;
-use diccionari_simple;
 use Ada.Text_IO, Ada.Calendar, pparaula;
 
 
 procedure Main is
-
-   --     procedure inicialitzar_diccionari is
-   --        package diccionari_simple is new diccionari_simple (100);
-   --        use diccionari_simple;
-   --     begin
-   --        put_line("");
-   --     end inicialitzar_diccionari;
 
    Start_Time : Ada.Calendar.Time;
 
@@ -19,31 +11,38 @@ procedure Main is
    letra: String(1..2);
    last_letra: Natural;
    last_fichero: Natural;
+   num_paraules: Natural;
 
    origen: OrigenParaules;
    p: tparaula;
-   dicc: diccionari;
 
    linia: integer:= 0;
    columna: integer:= 1;
    siguiente: boolean:= false;
 
-begin
-   --inicialitzar_diccionari;
-   put_line("Escriba 'f' para realizar la lectura desde un fichero o 't' si desea realizar la lectura desde teclado");
-   Ada.Text_IO.Get_Line(letra,last_letra);
+   function paraulesDiccionari(nom_diccionari: in String) return Natural is
+      num_paraules: Natural:=0;
+      fitxer: File_Type;
+      c: character;
+   begin
+      Open(fitxer, In_File, nom_fichero_dicc(1..last_fichero));
+      while not End_Of_File(fitxer) loop
+         get(fitxer, c);
+         if c = ' ' then
+            num_paraules := num_paraules + 1;
+         end if;
+      end loop;
+      Close(fitxer);
+      return num_paraules + 1;
+   end paraulesDiccionari;
 
-   if(letra(1..last_letra)="f") then
-      put_line("Indique el nombre del fichero que contiene el diccionario");
-      Ada.Text_IO.Get_Line(nom_fichero_dicc,last_fichero);
-      open(origen,nom_fichero_dicc(1..last_fichero)); --abrimos el fichero que contiene el diccionario
-      --open(origen,"diccionario.dic");
-
+   procedure mainAction(num_paraules : in Natural) is
+      package diccio is new diccionari_simple (num_paraules); use diccio;
+      dicc: diccionari;
+   begin
       buit(dicc);
-
       get(origen, p, linia, columna);
       while not buida(p) loop
-         --put_line(toString(p));
          posa(dicc, p); --creamos la estructura de diccionario
          get(origen, p, linia, columna);
       end loop;
@@ -77,6 +76,20 @@ begin
       Put_Line(Duration'Image(Ada.Calendar.Clock - Start_Time) & " segundos"); -- Imprimimos el tiempo que ha tardado
 
       close(origen); --cerramos el fichero de texto
+   end mainAction;
+
+
+begin
+   --inicialitzar_diccionari;
+   put_line("Escriba 'f' para realizar la lectura desde un fichero o 't' si desea realizar la lectura desde teclado");
+   Ada.Text_IO.Get_Line(letra,last_letra);
+
+   if(letra(1..last_letra)="f") then
+      put_line("Indique el nombre del fichero que contiene el diccionario");
+      Ada.Text_IO.Get_Line(nom_fichero_dicc,last_fichero);
+
+      num_paraules := paraulesDiccionari(nom_fichero_dicc);
+      mainAction(num_paraules);
 
    elsif(letra(1..last_letra) = "t") then
       open(origen);
