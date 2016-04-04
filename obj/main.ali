@@ -8,22 +8,21 @@ RV NO_CALENDAR
 RV NO_DELAY
 RV NO_FIXED_POINT
 RV NO_IO
-RV NO_STANDARD_STORAGE_POOLS
+RV NO_SECONDARY_STACK
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK
 
-U main%b		main.adb		191993a6 NE OO SU
+U main%b		main.adb		c829e34d NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.sequential_io%s
-W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W diccionari_simple%s	diccionari_simple.adb	diccionari_simple.ali
 W pparaula%s		pparaula.adb		pparaula.ali
 W system.concat_2%s	s-conca2.adb		s-conca2.ali
-W system.concat_5%s	s-conca5.adb		s-conca5.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.img_lld%s	s-imglld.adb		s-imglld.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -41,14 +40,14 @@ D a-textio.ads		20130417131022 386df5d4
 D a-unccon.ads		20130417131022 f9eb8f06
 D a-zchara.ads		20130417131022 21c8f2b2
 D a-zchhan.ads		20130417131022 c300220e
-D diccionari_simple.ads	20160319170642 6f56d2eb
+D diccionari_simple.ads	20160321112158 78ce3972
 D interfac.ads		20130417131026 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D main.adb		20160320155812 f62f099f
-D pparaula.ads		20160320123724 1b3d4cb2
+D main.adb		20160321135836 76133421
+D pparaula.ads		20160321113232 5da9ea7e
 D system.ads		20130417131036 5fc8ae56
 D s-conca2.ads		20130417131028 fbd0f2fc
-D s-conca5.ads		20130417131028 1039cea1
+D s-conca4.ads		20130417131028 025fe3be
 D s-crtl.ads		20130417131028 dfcfca61
 D s-exctab.ads		20130417131028 66e51330
 D s-ficobl.ads		20130417131028 55a71d43
@@ -71,49 +70,49 @@ D s-traent.ads		20130417131032 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 17|1r6 1r25 1r38 2r5 2r18 6r17 24r4 28r7 44r7 47r20 64r31
+16K9*Ada 19e8 17|1r6 1r25 1r38 3r5 3r18 15r17 34r4 38r7 54r7 57r20 77r31
 X 2 a-calend.ads
-36K13*Calendar 375e17 17|1w42 2r22 6r21 47r24 64r35
-38I9*Time 17|6r30
-52V13*Clock{38I9} 17|47s33 64s44
-97V14*"-"{duration} 17|64s50
+36K13*Calendar 375e17 17|1w42 3r22 15r21 57r24 77r35
+38I9*Time 17|15r30
+52V13*Clock{38I9} 17|57s33 77s44
+97V14*"-"{duration} 17|77s50
 X 6 a-sequio.ads
 43k13*Sequential_IO 158e22 17|1w10
 X 10 a-textio.ads
-49K13*Text_IO 471e16 17|1w29 2r9 24r8 28r11 44r11
-249U14*Get_Line 17|24s16 28s19 44s19
-263U14*Put_Line 17|23s4 27s7 43s7 57s14 62s7 63s7 64s7 71s7
+49K13*Text_IO 471e16 17|1w29 3r9 34r8 38r11 54r11
+249U14*Get_Line 17|34s16 38s19 54s19
+263U14*Put_Line 17|33s4 37s7 53s7 65s7 69s13 71s10 75s7 76s7 77s7 84s7
 X 14 diccionari_simple.ads
-6K9*diccionari_simple 26e22 17|1w62 2r42
-8R9*diccionari 24e17 17|16r10
-13U14*buit 17|32s7
-14U14*posa 17|37s10
-15V13*existeix{boolean} 17|56s13
+6K9*diccionari_simple 28e22 17|1w62 2r5
+8R9*diccionari 26e17 17|25r10
+13U14*buit 17|42s7
+14U14*posa 17|47s10
+15V13*existeix{boolean} 17|68s13
 X 17 main.adb
-4U11*Main 4b11 75l5 75t9
-6i4 Start_Time{2|38I9} 47m7 64r52
-8a4 nom_fichero_dicc{string} 28m28 29r19
-9a4 nom_fichero_texto{string} 44m28 45r19
-10a4 letra{string} 24m25 26r7 68r10
-11i4 last_letra{natural} 24m31 26r16 68r19
-12i4 last_fichero{natural} 28m45 29r39 44m46 45r40
-14r4 origen{18|48R9} 29m12 34m11 34r11 38m14 38r14 41m13 41r13 45m12 54m11
-. 54r11 59m14 59r14 66m13 66r13 69m12
-15r4 p{18|21R9} 34m19 35r23 37r21 38m22 54m19 55r23 56r28 57r32 59m22
-16r4 dicc{14|8R9} 32m12 37m15 37r15 56r22
-18i4 linia{integer} 34m22 34r22 38m25 38r25 50m7 54m22 54r22 57r51 59m25
-. 59r25
-19i4 columna{integer} 34m29 34r29 38m32 38r32 51m7 54m29 54r29 57r80 59m32
-. 59r32
-20b4 siguiente{boolean} 34m38 34r38 38m41 38r41 52m7 54m38 54r38 59m41 59r41
+6U11*Main 6b11 88l5 88t9
+15i4 Start_Time{2|38I9} 57m7 77r52
+17a4 nom_fichero_dicc{string} 38m28 39r19
+18a4 nom_fichero_texto{string} 54m28 55r19
+19a4 letra{string} 34m25 36r7 81r10
+20i4 last_letra{natural} 34m31 36r16 81r19
+21i4 last_fichero{natural} 38m45 39r39 54m46 55r40
+23r4 origen{18|48R9} 39m12 44m11 44r11 48m14 48r14 51m13 51r13 55m12 66m11
+. 66r11 72m14 72r14 79m13 79r13 82m12
+24r4 p{18|21R9} 44m19 45r23 47r21 48m22 66m19 67r23 68r28 69r31 72m22
+25r4 dicc{14|8R9} 42m12 47m15 47r15 68r22
+27i4 linia{integer} 44m22 44r22 48m25 48r25 60m7 65r27 66m22 66r22 71r30
+. 72m25 72r25
+28i4 columna{integer} 44m29 44r29 48m32 48r32 61m7 65r56 66m29 66r29 71r59
+. 72m32 72r32
+29b4 siguiente{boolean} 62m7
 X 18 pparaula.ads
-9K9*pparaula 17|1w52 2r32 18|86e13
-21R9*tparaula 17|15r7 18|73e14
-33V13*buida{boolean} 17|35s17 55s17
-38V13*toString{string} 17|57s23
-48R9*OrigenParaules 17|14r12 18|84e14
-51U14*open 17|69s7
-53U14*open 17|29s7 45s7
-55U14*close 17|41s7 66s7
-57U14*get 17|34s7 38s10 54s7 59s10
+9K9*pparaula 17|1w52 3r32 18|86e13
+21R9*tparaula 17|24r7 18|73e14
+33V13*buida{boolean} 17|45s17 67s17
+38V13*toString{string} 17|69s22
+48R9*OrigenParaules 17|23r12 18|84e14
+51U14*open 17|82s7
+53U14*open 17|39s7 55s7
+55U14*close 17|51s7 79s7
+57U14*get 17|44s7 48s10 66s7 72s10
 

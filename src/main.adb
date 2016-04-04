@@ -1,7 +1,16 @@
 with Ada.Sequential_IO, Ada.Text_IO, Ada.Calendar, pparaula, diccionari_simple;
-use Ada.Text_IO, Ada.Calendar, pparaula, diccionari_simple;
+use diccionari_simple;
+use Ada.Text_IO, Ada.Calendar, pparaula;
+
 
 procedure Main is
+
+   --     procedure inicialitzar_diccionari is
+   --        package diccionari_simple is new diccionari_simple (100);
+   --        use diccionari_simple;
+   --     begin
+   --        put_line("");
+   --     end inicialitzar_diccionari;
 
    Start_Time : Ada.Calendar.Time;
 
@@ -15,11 +24,12 @@ procedure Main is
    p: tparaula;
    dicc: diccionari;
 
-   linia: integer:= 1;
+   linia: integer:= 0;
    columna: integer:= 1;
    siguiente: boolean:= false;
 
 begin
+   --inicialitzar_diccionari;
    put_line("Escriba 'f' para realizar la lectura desde un fichero o 't' si desea realizar la lectura desde teclado");
    Ada.Text_IO.Get_Line(letra,last_letra);
 
@@ -31,11 +41,11 @@ begin
 
       buit(dicc);
 
-      get(origen, p, linia, columna, siguiente);
+      get(origen, p, linia, columna);
       while not buida(p) loop
          --put_line(toString(p));
-	 posa(dicc, p); --creamos la estructura de diccionario
-         get(origen, p, linia, columna, siguiente);
+         posa(dicc, p); --creamos la estructura de diccionario
+         get(origen, p, linia, columna);
       end loop;
 
       close(origen); --cerramos el fichero del diccionario
@@ -48,15 +58,18 @@ begin
 
 
       linia:= 1; --Reiniciamos el valor de la linea para el nuevo fichero
-      columna:= 0; --Reiniciamos el valor de la columna para el nuevo fichero
+      columna:=1; --Reiniciamos el valor de la columna para el nuevo fichero
       siguiente:= false; --Reiniciamos el valor del booleano siguiente para el nuevo fichero
 
-      get(origen, p, linia, columna, siguiente);
+
+      put_line("fila: " & linia'Img & " - columna: " & columna'Img);
+      get(origen, p, linia, columna);
       while not buida(p) loop
          if existeix(dicc, p)=false then--miramos si NO existe la palabra dentro del diccionario
-             put_line(toString(p) & " - fila: " & linia'Img & " - columna: " & columna'Img);
+            put_line(toString(p));
          end if;
-         get(origen, p, linia, columna, siguiente);
+         put_line("fila: " & linia'Img & " - columna: " & columna'Img);
+         get(origen, p, linia, columna);
       end loop;
 
       Put_Line("");

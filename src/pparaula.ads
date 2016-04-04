@@ -54,7 +54,7 @@ package pparaula is
    -- Procediment per tancar l'origen de les paraules
    procedure close(origen : in out OrigenParaules);
    -- Procediment per llegir una paraula des d'un origen de paraules
-   procedure get(origen : in out OrigenParaules; p: out tparaula; linia: in out integer; columna: in out integer; siguiente: in out boolean);
+   procedure get(origen : in out OrigenParaules; p: out tparaula; fila: in out integer; columna: in out integer);
 
 
 

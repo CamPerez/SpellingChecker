@@ -105,23 +105,25 @@ package body pparaula is
    end close;
 
    -- Procediment per llegir una paraula des d'un origen de paraules
-   procedure get(origen : in out OrigenParaules; p: out tparaula; linia: in out integer; columna: in out integer; siguiente: in out boolean) is -- siguiente: para indicar si la siguiente palabra es una nueva linea
+   procedure get(origen : in out OrigenParaules; p: out tparaula; fila: in out integer; columna: in out integer) is -- siguiente: para indicar si la siguiente palabra es una nueva linea
       letra: character;
       idx, idx_linea: integer;
       lineaTeclado: String(rang_lletres);
       num_car: natural;
    begin
-      if origen.defitxer = true then -- Si la lectura es fa des de un fitxer
+      if origen.defitxer = true then -- Si la lectura es fa des d'un fitxer
          idx:=0;
          while not End_Of_File(origen.fitxer) loop -- Mentre no arribi al final del fitxer i no sigui final de paraula
             Get(origen.fitxer,letra);
-            if siguiente=true then
-               columna:= 0; --Reiniciamos columna a 0 si la siguiente era la ultima de su linea
-               linia:= linia + 1; --Aumentamos en una la linea si la siguiente era el final de linea
-               siguiente:=false;
-            end if;
+            --if siguiente=true then
+            --columna:= 0; --Reiniciamos columna a 0 si la siguiente era la ultima de su linea
+            --fila:= fila + 1; --Aumentamos en una la linea si la siguiente era el final de linea
+            --   siguiente:=false;
+            --end if;
             if End_Of_Line(origen.fitxer) then
-               siguiente:=true;
+               fila:=fila+1;
+               columna:=0;
+               -- siguiente:=true;
             end if;
             exit when letra = ' ';
             idx:= idx+1;

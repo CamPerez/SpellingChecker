@@ -1,8 +1,8 @@
---llista implementada amb cursors.
 with pparaula;
 use pparaula;
 
-
+--  generic
+--     max: natural;
 package diccionari_simple is
 
    type diccionari is limited private;
@@ -11,16 +11,18 @@ package diccionari_simple is
    space_overflow: exception;
 
    procedure buit (d: out diccionari);
-   procedure posa (d: in out diccionari; paraula: in tparaula);
-   function existeix (d: in diccionari; paraula: in tparaula) return boolean;
+   procedure posa (d: in out diccionari; p: in tparaula);
+   function existeix (d: in diccionari; p: in tparaula) return boolean;
 
 private
 
    type index is new integer range 0..100;
+   type mem_space is array(index range 1..index'last) of tparaula;
 
    type diccionari is
       record
-         first: index;
+         a: mem_space;
+         n: index;
       end record;
 
 end diccionari_simple;
