@@ -69,8 +69,10 @@ procedure Main is
 
       put_line("A aquesta fila i columna finalitza el teu text");
       Put_Line("");
-      Put_line("Ha tardado: ");
-      Put_Line(Duration'Image(Ada.Calendar.Clock - Start_Time) & " segundos"); -- imprimir el temps que ha tardat
+      Put_line("Ha tardat: ");
+      Put_Line(Duration'Image((Ada.Calendar.Clock - Start_Time)/60) & " minuts"); -- imprimir el temps que ha tardat (minuts)
+      Put_Line(Duration'Image(Ada.Calendar.Clock - Start_Time) & " segons"); -- imprimir el temps que ha tardat (segons)
+      Put_Line(Duration'Image((Ada.Calendar.Clock - Start_Time)*1000) & " mil·lèsimes"); -- imprimir el temps que ha tardat (mil·lèsimes)
       close(origen);
    end mainAction;
 

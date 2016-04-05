@@ -27,11 +27,11 @@ D a-textio.ads		20130417131022 386df5d4
 D a-unccon.ads		20130417131022 f9eb8f06
 D a-zchara.ads		20130417131022 21c8f2b2
 D a-zchhan.ads		20130417131022 c300220e
-D diccionari_simple.ads	20160405090810 afb46d1a
-D diccionari_simple.adb	20160405161228 e9ff2d68
+D diccionari_simple.ads	20160405174530 afb46d1a
+D diccionari_simple.adb	20160405174530 e9ff2d68
 D interfac.ads		20130417131026 cb4a8015
 D i-cstrea.ads		20130417131026 8128536b
-D pparaula.ads		20160405173714 e8cdf8fd
+D pparaula.ads		20160405174530 e8cdf8fd
 D system.ads		20130417131036 5fc8ae56
 D s-crtl.ads		20130417131028 dfcfca61
 D s-exctab.ads		20130417131028 66e51330
