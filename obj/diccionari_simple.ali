@@ -28,7 +28,7 @@ D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D a-zchara.ads		20150518132148 21c8f2b2 ada.wide_wide_characters%s
 D a-zchhan.ads		20150518132148 28d85bc4 ada.wide_wide_characters.handling%s
-D diccionari_simple.ads	20160404101750 afb46d1a diccionari_simple%s
+D diccionari_simple.ads	20160404104244 afb46d1a diccionari_simple%s
 D diccionari_simple.adb	20160404094542 e9ff2d68 diccionari_simple%b
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s

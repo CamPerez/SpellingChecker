@@ -1,11 +1,10 @@
 V "GNAT Lib v2015"
-A -gnatA
+A -mtune=generic
+A -march=pentiumpro
 A -gnatA
 A -gnatWb
 A -gnatiw
 A -gnatws
-A -mtune=generic
-A -march=pentiumpro
 P ZX
 
 RN
@@ -15,19 +14,19 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U ada_main%b		b__main.adb		f9e56057 NE OO PK IL
+U ada_main%b		b~main.adb		4b8d2768 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 
-U ada_main%s		b__main.ads		ee798a70 EE NE OO PK IL
+U ada_main%s		b~main.ads		ee798a70 EE NE OO PK IL
 W system%s		system.ads		system.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D b__main.ads		20160404191720 1ab7064a ada_main%s
-D b__main.adb		20160404191720 b102ad74 ada_main%b
+D b~main.ads		20160404191720 1ab7064a ada_main%s
+D b~main.adb		20160404191720 036aea4b ada_main%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
 D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
@@ -36,7 +35,7 @@ X 1 ada.ads
 16K9*Ada 19e8 5|5r6
 X 2 a-except.ads
 54K13*Exceptions 361e19 5|5w10
-X 4 b__main.ads
+X 4 b~main.ads
 3K9*ada_main 360l5 360e13 5|7b14 220l5 220t13
 6i4*gnat_argc{integer} 10m22 10r22 5|196m7
 7m4*gnat_argv{6|67M9} 11m22 11r22 5|197m7
@@ -166,7 +165,7 @@ X 4 b__main.ads
 244m4*u00104{37M9} 245r22
 246m4*u00105{37M9} 247r22
 248m4*u00106{37M9} 249r22
-X 5 b__main.adb
+X 5 b~main.adb
 10i4 E080{short_integer} 10m46 10r46 166m7 166r15
 11i4 E013{short_integer} 11m46 11r46 164m7 164r15
 12i4 E023{short_integer} 12m46 12r46 140m7 140r15

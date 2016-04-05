@@ -6,11 +6,11 @@ procedure Main is
 
    Start_Time : Ada.Calendar.Time;
 
-   nom_fichero_dicc: String (1..80);
-   nom_fichero_texto: String (1..80);
+   nom_fichero_dicc: String (1..14);
+   nom_fichero_texto: String (1..8);
    letra: String(1..2);
    last_letra: Natural;
-   last_fichero: Natural;
+   --last_fichero: Natural;
    num_paraules: Natural;
 
    origen: OrigenParaules;
@@ -20,12 +20,12 @@ procedure Main is
    columna: integer:= 1;
    siguiente: boolean:= false;
 
-   function paraulesDiccionari(nom_diccionari: in String) return Natural is
+   function paraulesDiccionari(nom_fichero_dicc: in String) return Natural is
       num_paraules: Natural:=0;
       fitxer: File_Type;
       c: character;
    begin
-      Open(fitxer, In_File, nom_fichero_dicc(1..last_fichero));
+      Open(fitxer, In_File, nom_fichero_dicc);
       while not End_Of_File(fitxer) loop
          get(fitxer, c);
          if c = ' ' then
@@ -40,20 +40,19 @@ procedure Main is
       package diccio is new diccionari_simple (num_paraules); use diccio;
       dicc: diccionari;
    begin
+      open(origen,nom_fichero_dicc);
       buit(dicc);
       get(origen, p, linia, columna);
       while not buida(p) loop
-         posa(dicc, p); --creamos la estructura de diccionario
+         posa(dicc, p); --cream l'estructura diccionari
          get(origen, p, linia, columna);
       end loop;
+      close(origen); --tancam el fitxer del diccionari
 
-      close(origen); --cerramos el fichero del diccionario
+      nom_fichero_texto:="text.txt";
+      open(origen,nom_fichero_texto); --obrim el fitxer que conté el texto
 
-      put_line("Indique el nombre del fichero de texto");
-      Ada.Text_IO.Get_Line(nom_fichero_texto,last_fichero);
-      open(origen,nom_fichero_texto(1..last_fichero)); --abrimos el fichero que contiene el texto
-
-      Start_Time:= Ada.Calendar.Clock; --Cogemos el tiempo antes de empezar el proceso de comparación
+      Start_Time:= Ada.Calendar.Clock; -- agafam el temps abans de començar el procés de comparació
 
 
       linia:= 1; --Reiniciamos el valor de la linea para el nuevo fichero
@@ -61,21 +60,20 @@ procedure Main is
       siguiente:= false; --Reiniciamos el valor del booleano siguiente para el nuevo fichero
 
 
-      put_line("fila: " & linia'Img & " - columna: " & columna'Img);
+      --put_line("fila: " & linia'Img & " - columna: " & columna'Img);
       get(origen, p, linia, columna);
       while not buida(p) loop
-         if existeix(dicc, p)=false then--miramos si NO existe la palabra dentro del diccionario
+         if existeix(dicc, p)=false then-- miran si NO existeix la paraula dins del diccionari
             put_line(toString(p));
          end if;
-         put_line("fila: " & linia'Img & " - columna: " & columna'Img);
+         --put_line("fila: " & linia'Img & " - columna: " & columna'Img);
          get(origen, p, linia, columna);
       end loop;
 
       Put_Line("");
       Put_line("Ha tardado: ");
-      Put_Line(Duration'Image(Ada.Calendar.Clock - Start_Time) & " segundos"); -- Imprimimos el tiempo que ha tardado
-
-      close(origen); --cerramos el fichero de texto
+      Put_Line(Duration'Image(Ada.Calendar.Clock - Start_Time) & " segundos"); -- imprimir el temps que ha tardat
+      close(origen);
    end mainAction;
 
 
@@ -85,11 +83,9 @@ begin
    Ada.Text_IO.Get_Line(letra,last_letra);
 
    if(letra(1..last_letra)="f") then
-      put_line("Indique el nombre del fichero que contiene el diccionario");
-      Ada.Text_IO.Get_Line(nom_fichero_dicc,last_fichero);
-
+      nom_fichero_dicc:="diccionari.dic";
       num_paraules := paraulesDiccionari(nom_fichero_dicc);
-      mainAction(num_paraules);
+      mainAction(100);
 
    elsif(letra(1..last_letra) = "t") then
       open(origen);
