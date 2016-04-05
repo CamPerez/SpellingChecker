@@ -13,7 +13,7 @@ package body diccionari_simple is
       n: index renames d.n;
       a: mem_space renames d.a;
    begin
-      if not existeix(d, p) then       
+      if not existeix(d, p) then
          n:= n+1; a(n):=p;
       end if;      
    exception

@@ -16,9 +16,8 @@ procedure Main is
    origen: OrigenParaules;
    p: tparaula;
 
-   linia: integer:= 0;
-   columna: integer:= 1;
-   siguiente: boolean:= false;
+   linia: integer;
+   columna: integer;
 
    function paraulesDiccionari(nom_fichero_dicc: in String) return Natural is
       num_paraules: Natural:=0;
@@ -54,22 +53,21 @@ procedure Main is
 
       Start_Time:= Ada.Calendar.Clock; -- agafam el temps abans de començar el procés de comparació
 
-
-      linia:= 1; --Reiniciamos el valor de la linea para el nuevo fichero
       columna:=1; --Reiniciamos el valor de la columna para el nuevo fichero
-      siguiente:= false; --Reiniciamos el valor del booleano siguiente para el nuevo fichero
+      reiniciarColumna(origen); --Reiniciamos el valor de la columna para el nuevo fichero
 
-
-      --put_line("fila: " & linia'Img & " - columna: " & columna'Img);
+      put_line("fila: " & linia'Img & " - columna: " & columna'Img);
       get(origen, p, linia, columna);
       while not buida(p) loop
-         if existeix(dicc, p)=false then-- miran si NO existeix la paraula dins del diccionari
+         if existeix(dicc, p)=false then -- miran si NO existeix la paraula dins del diccionari
             put_line(toString(p));
+            put_line("");
+            put_line("fila: " & linia'Img & " - columna: " & columna'Img);
          end if;
-         --put_line("fila: " & linia'Img & " - columna: " & columna'Img);
          get(origen, p, linia, columna);
       end loop;
 
+      put_line("A aquesta fila i columna finalitza el teu text");
       Put_Line("");
       Put_line("Ha tardado: ");
       Put_Line(Duration'Image(Ada.Calendar.Clock - Start_Time) & " segundos"); -- imprimir el temps que ha tardat

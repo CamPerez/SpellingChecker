@@ -19,6 +19,7 @@ private
    type index is new integer range 0..max;
    type mem_space is array(index range 1..index'last) of tparaula;
 
+
    type diccionari is
       record
          a: mem_space;

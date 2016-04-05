@@ -54,11 +54,11 @@ package pparaula is
    -- Procediment per tancar l'origen de les paraules
    procedure close(origen : in out OrigenParaules);
    -- Procediment per llegir una paraula des d'un origen de paraules
-   procedure get(origen : in out OrigenParaules; p: out tparaula; fila: in out integer; columna: in out integer);
+   procedure get(origen : in out OrigenParaules; p: out tparaula; fila: out integer; columna: out integer);
+   -- Procediment per reiniciar la columna des d'un origen de paraules
+   procedure reiniciarColumna(origen : in out OrigenParaules);
 
-
-
-private
+   private
    --------------------------------------------------------------
    -- Declaracions privades relacionades amb el tipus tparaula --
    --------------------------------------------------------------
@@ -76,11 +76,13 @@ private
    ---------------------------------------------------------------------
    -- Definicions públiques relacionades amb l'origen de les paraules --
    ---------------------------------------------------------------------
+
    type OrigenParaules is record
-      defitxer : boolean; -- si el camp és true es llegeix de fitxer
-                          -- si és false es llegeix del teclat
+      defitxer : boolean; -- si el camp és true es llegeix de fitxer, si és false es llegeix del teclat
       fitxer : file_type; -- Si s'ha de llegir del fitxer es fa és del camp
       lletra : character; -- darrer caràcter llegit
+      f: integer:=0; --fila
+      c: integer:=0; --columna
    end record;
 
 end pparaula;

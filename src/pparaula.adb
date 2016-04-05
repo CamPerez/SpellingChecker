@@ -105,12 +105,15 @@ package body pparaula is
    end close;
 
    -- Procediment per llegir una paraula des d'un origen de paraules
-   procedure get(origen : in out OrigenParaules; p: out tparaula; fila: in out integer; columna: in out integer) is -- siguiente: para indicar si la siguiente palabra es una nueva linea
+   procedure get(origen : in out OrigenParaules; p: out tparaula; fila: out integer; columna: out integer) is -- siguiente: para indicar si la siguiente palabra es una nueva linea
       letra: character;
       idx, idx_linea: integer;
       lineaTeclado: String(rang_lletres);
       num_car: natural;
    begin
+      fila:=origen.f;
+      columna:=origen.c;
+      --put_line("columnaaaa" & columna'Img);
       if origen.defitxer = true then -- Si la lectura es fa des d'un fitxer
          idx:=0;
          while not End_Of_File(origen.fitxer) loop -- Mentre no arribi al final del fitxer i no sigui final de paraula
@@ -120,18 +123,26 @@ package body pparaula is
             --fila:= fila + 1; --Aumentamos en una la linea si la siguiente era el final de linea
             --   siguiente:=false;
             --end if;
+
             if End_Of_Line(origen.fitxer) then
                fila:=fila+1;
+               origen.f:=fila; --volvemos a introducir el valor en el record
                columna:=0;
+               origen.c:=columna; --volvemos a introducir el valor en el record
                -- siguiente:=true;
+            end if;
+            if letra = ' ' then
+               columna:= columna + 1;
+               origen.c:=columna; --volvemos a introducir el valor en el record
             end if;
             exit when letra = ' ';
             idx:= idx+1;
+            columna:= columna + 1;
             p.lletres(idx):= letra;
             exit when End_Of_Line(origen.fitxer);
          end loop;
          p.llargaria:=idx;
-         columna:= columna + 1;
+         origen.c:=columna; --volvemos a introducir el valor en el record
       else -- Si la lectura es fa des de teclat
          put_line("Escriu la paraula:");
          Ada.Text_IO.Get_Line(lineaTeclado,num_car);
@@ -147,5 +158,10 @@ package body pparaula is
       end if;
 
    end get;
+
+   procedure reiniciarColumna(origen : in out OrigenParaules) is
+   begin
+      origen.c:=1;
+   end reiniciarColumna;
 
 end pparaula;
