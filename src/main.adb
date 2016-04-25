@@ -1,5 +1,5 @@
-with Ada.Sequential_IO, Ada.Text_IO, Ada.Calendar, pparaula, diccionari_simple;
-use Ada.Text_IO, Ada.Calendar, pparaula;
+with Ada.Sequential_IO, Ada.Text_IO, Ada.Calendar, pparaula, diccionari_simple, diccionari_tr;
+use Ada.Text_IO, Ada.Calendar, pparaula, diccionari_tr;
 
 
 procedure Main is
@@ -35,8 +35,48 @@ procedure Main is
       return num_paraules + 1;
    end paraulesDiccionari;
 
-   procedure mainAction(num_paraules : in Natural) is
+   procedure mainActionSimple(num_paraules : in Natural) is
       package diccio is new diccionari_simple (num_paraules); use diccio;
+      dicc: diccio.diccionari;
+   begin
+      open(origen,nom_fichero_dicc);
+      buit(dicc);
+      get(origen, p, linia, columna);
+      while not buida(p) loop
+         posa(dicc, p); --cream l'estructura diccionari
+         get(origen, p, linia, columna);
+      end loop;
+      close(origen); --tancam el fitxer del diccionari
+
+      nom_fichero_texto:="text.txt";
+      open(origen,nom_fichero_texto); --obrim el fitxer que conté el texto
+
+      Start_Time:= Ada.Calendar.Clock; -- agafam el temps abans de començar el procés de comparació
+
+      columna:=1; --Reiniciamos el valor de la columna para el nuevo fichero
+      reiniciarColumna(origen); --Reiniciamos el valor de la columna para el nuevo fichero
+
+      put_line("fila: " & linia'Img & " - columna: " & columna'Img);
+      get(origen, p, linia, columna);
+      while not buida(p) loop
+         if existeix(dicc, p)=false then -- miran si NO existeix la paraula dins del diccionari
+            put_line(toString(p));
+            put_line("");
+            put_line("fila: " & linia'Img & " - columna: " & columna'Img);
+         end if;
+         get(origen, p, linia, columna);
+      end loop;
+
+      put_line("A aquesta fila i columna finalitza el teu text");
+      Put_Line("");
+      Put_line("Ha tardat: ");
+      Put_Line(Duration'Image((Ada.Calendar.Clock - Start_Time)/60) & " minuts"); -- imprimir el temps que ha tardat (minuts)
+      Put_Line(Duration'Image(Ada.Calendar.Clock - Start_Time) & " segons"); -- imprimir el temps que ha tardat (segons)
+      Put_Line(Duration'Image((Ada.Calendar.Clock - Start_Time)*1000) & " mil·lèsimes"); -- imprimir el temps que ha tardat (mil·lèsimes)
+      close(origen);
+   end mainActionSimple;
+
+   procedure mainActionTrie is
       dicc: diccionari;
    begin
       open(origen,nom_fichero_dicc);
@@ -74,7 +114,7 @@ procedure Main is
       Put_Line(Duration'Image(Ada.Calendar.Clock - Start_Time) & " segons"); -- imprimir el temps que ha tardat (segons)
       Put_Line(Duration'Image((Ada.Calendar.Clock - Start_Time)*1000) & " mil·lèsimes"); -- imprimir el temps que ha tardat (mil·lèsimes)
       close(origen);
-   end mainAction;
+   end mainActionTrie;
 
 
 begin
@@ -85,7 +125,10 @@ begin
    if(letra(1..last_letra)="f") then
       nom_fichero_dicc:="diccionari.dic";
       num_paraules := paraulesDiccionari(nom_fichero_dicc);
-      mainAction(100);
+      mainActionSimple(100);
+      put_line("--------- TRIE ---------");
+      mainActionTrie;
+
 
    elsif(letra(1..last_letra) = "t") then
       open(origen);

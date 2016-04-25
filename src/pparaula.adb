@@ -67,7 +67,7 @@ package body pparaula is
          paraula(x) := p.lletres(x);
       end loop;
 
-      return paraula & " - llargària: " & p.llargaria'img; --Devuelve el String con la palabra y la llargaria
+      return paraula;
 
    end toString;
 

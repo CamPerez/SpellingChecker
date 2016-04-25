@@ -24,6 +24,7 @@ package body ada_main is
    E066 : Short_Integer; pragma Import (Ada, E066, "ada__text_io_E");
    E087 : Short_Integer; pragma Import (Ada, E087, "pparaula_E");
    E085 : Short_Integer; pragma Import (Ada, E085, "diccionari_simple_E");
+   E096 : Short_Integer; pragma Import (Ada, E096, "diccionari_tr_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
    Local_Interrupt_States : constant String := "";
@@ -171,6 +172,8 @@ package body ada_main is
       E066 := E066 + 1;
       E087 := E087 + 1;
       E085 := E085 + 1;
+      diccionari_tr'elab_spec;
+      E096 := E096 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -208,6 +211,7 @@ package body ada_main is
 --  BEGIN Object file/option list
    --   C:\Users\Usuario\Desktop\SpellingChecker\obj\pparaula.o
    --   C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_simple.o
+   --   C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_tr.o
    --   C:\Users\Usuario\Desktop\SpellingChecker\obj\main.o
    --   -LC:\Users\Usuario\Desktop\SpellingChecker\obj\
    --   -LC:\Users\Usuario\Desktop\SpellingChecker\obj\
