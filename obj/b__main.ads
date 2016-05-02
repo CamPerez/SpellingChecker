@@ -223,7 +223,7 @@ package ada_main is
    pragma Export (C, u00093, "system__utf_32B");
    u00094 : constant Version_32 := 16#6a4765f6#;
    pragma Export (C, u00094, "system__utf_32S");
-   u00095 : constant Version_32 := 16#29ad052a#;
+   u00095 : constant Version_32 := 16#ddaf35b2#;
    pragma Export (C, u00095, "diccionari_trB");
    u00096 : constant Version_32 := 16#d0e4c041#;
    pragma Export (C, u00096, "diccionari_trS");

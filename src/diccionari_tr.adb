@@ -28,8 +28,8 @@ package body diccionari_tr is
          if p.all(c).punter = null then
             r:= new node;
             for x in r'Range loop
-       	 	root(x).punter:=null;
-         	root(x).is_in:=false;
+       	 	r(x).punter:=null;
+         	r(x).is_in:=false;
             end loop;
             p.all(c).punter:= r;
          end if;
