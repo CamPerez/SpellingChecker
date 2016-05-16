@@ -1,7 +1,5 @@
-V "GNAT Lib v2015"
+V "GNAT Lib v2013"
 A -gnatA
-A -mtune=generic
-A -march=pentiumpro
 P SS ZX
 
 RN
@@ -17,7 +15,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
-RV SPARK_05
+RV SPARK
 
 U diccionari_tr%b	diccionari_tr.adb	29ad052a NE OO PK IL
 W ada%s			ada.ads			ada.ali
@@ -34,77 +32,83 @@ W system%s		system.ads		system.ali
 W system.exception_table%s  s-exctab.adb	s-exctab.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-D ada.ads		20150518132148 3ffc8e18 ada%s
-D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
-D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
-D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
-D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
-D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
-D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D a-zchara.ads		20150518132148 21c8f2b2 ada.wide_wide_characters%s
-D a-zchhan.ads		20150518132148 28d85bc4 ada.wide_wide_characters.handling%s
-D diccionari_tr.ads	20160411112322 382938bc diccionari_tr%s
-D diccionari_tr.adb	20160411112608 c12430bf diccionari_tr%b
-D interfac.ads		20150518132148 6033a23f interfaces%s
-D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D pparaula.ads		20160407182914 e8cdf8fd pparaula%s
-D system.ads		20150518132150 f4ce8c3a system%s
-D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
-D s-exctab.ads		20150518132148 54135002 system.exception_table%s
-D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
-D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
-D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
-D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
-D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
-D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
-D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
-D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
-D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+D ada.ads		20130417131022 3ffc8e18
+D a-except.ads		20130417131018 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-stream.ads		20130417131020 2ca4ee37
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-unccon.ads		20130417131022 f9eb8f06
+D a-zchara.ads		20130417131022 21c8f2b2
+D a-zchhan.ads		20130417131022 c300220e
+D diccionari_tr.ads	20160425095000 382938bc
+D diccionari_tr.adb	20160425095000 c12430bf
+D interfac.ads		20130417131026 cb4a8015
+D i-cstrea.ads		20130417131026 8128536b
+D pparaula.ads		20160405174530 e8cdf8fd
+D system.ads		20130417131036 5fc8ae56
+D s-crtl.ads		20130417131028 dfcfca61
+D s-exctab.ads		20130417131028 66e51330
+D s-ficobl.ads		20130417131028 55a71d43
+D s-finmas.ads		20130417131028 b95bb341
+D s-finroo.ads		20130417131028 4ff27390
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-secsta.ads		20130417131032 eea35a36
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-traent.ads		20130417131032 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 11|1r6 1r23
-X 6 a-textio.ads
-49K13*Text_IO 471e16 11|1w10 1r27
-X 10 diccionari_tr.ads
-4K9*diccionari_tr 19E9 35l5 35e18 11|4b14 60l5 60t18
-6R9*diccionari 13r27 14r30 15r29 30c9 33e17 11|6r27 17r30 44r29
+16K9*Ada 19e8 12|1r6 1r23
+X 7 a-textio.ads
+49K13*Text_IO 471e16 12|1w10 1r27
+X 11 diccionari_tr.ads
+4K9*diccionari_tr 35l5 35e18 12|4b14 60l5 60t18
+6R9*diccionari 13r27 14r30 15r29 30c9 33e17 12|6r27 17r30 44r29
 10X4*bad_use
-11X4*space_overflow 11|40r38
-13U14*buit 13<20 11|6b14 15l8 15t12
-13r20 d{6R9} 11|6b20 7m27 7r27
-14U14*posa 14=20 14>42 11|17b14 41l8 41t12
-14r20 d{6R9} 11|17b20 18r27
-14r42 par{14|21R9} 11|17b42 22r37 25r26
-15V13*existeix{boolean} 15>23 15>41 11|44b13 58l8 58t16
-15r23 d{6R9} 11|44b23 45r27
-15r41 par{14|21R9} 11|44b41 48r37 52r26
-19A9 node 20r25 28c9 11|9r17 29r21
-20P9 pnode(19A9) 24r18 32r15 11|7r13 18r13 19r13 45r13 47r10
+11X4*space_overflow 12|40r38
+13U14*buit 13<20 12|6b14 15l8 15t12
+13r20 d{6R9} 12|6b20 7m27 7r27
+14U14*posa 14=20 14>42 12|17b14 41l8 41t12
+14r20 d{6R9} 12|17b20 18r27
+14r42 par{15|21R9} 12|17b42 22r37 25r26
+15V13*existeix{boolean} 15>23 15>41 12|44b13 58l8 58t16
+15r23 d{6R9} 12|44b23 45r27
+15r41 par{15|21R9} 12|44b41 48r37 52r26
+19A9 node 20r25 28c9 12|9r17 29r21
+20P9 pnode(19A9) 24r18 32r15 12|7r13 18r13 19r13 45r13 47r10
 22R9 cell 26e17 28r38
-24p10*punter{20P9} 11|11m18 28r22 31m25 34m22 36r23 54r38 55r23
-25b10*is_in{boolean} 11|12m18 32m25 38m16 57r39
-32p10*root{20P9} 11|7m29 18m29 45m29
-X 11 diccionari_tr.adb
-7p7 root{10|20P9} 9r7 10r16 11r10 12r10
+24p10*punter{20P9} 12|11m18 28r22 31m25 34m22 36r23 54r38 55r23
+25b10*is_in{boolean} 12|12m18 32m25 38m16 57r39
+32p10*root{20P9} 12|7m29 18m29 45m29
+X 12 diccionari_tr.adb
+7p7 root{11|20P9} 9r7 10r16 11r10 12r10
 10e11 x{character} 11r15 12r15
-18p7 root{10|20P9} 26r11 31r17 32r17
-19p7 p{10|20P9} 26m7 28r13 34r13 36m10 36r14 38r7
-19p10 r{10|20P9} 29m13 30r22 34r31
+18p7 root{11|20P9} 26r11 31r17 32r17
+19p7 p{11|20P9} 26m7 28r13 34r13 36m10 36r14 38r7
+19p10 r{11|20P9} 29m13 30r22 34r31
 20e7 c{character} 26m24 28r19 34r19 36r20 36m39 38r13
 21i7 i{integer} 26m17 26r36 27r13 36m31 36r34 36r51
 22i7 llargar{integer} 23r27 27r16
 23a7 paraula{string} 25m7 26r28 36r43
 30e17 x{character} 31r22 32r22
-45p7 root{10|20P9} 53r11
+45p7 root{11|20P9} 53r11
 46e7 c{character} 53m24 54r35 55r20 55m39 57r36
-47p7 p{10|20P9} 53m7 54r29 55m10 55r14 57r30
+47p7 p{11|20P9} 53m7 54r29 55m10 55r14 57r30
 48i7 llargar{integer} 49r27 54r17 57r18
 49a7 paraula{string} 52m7 53r28 55r43
 50i7 i{integer} 53m17 53r36 54r13 55m31 55r34 55r51 57r14
-X 14 pparaula.ads
-9K9*pparaula 10|1w6 2r5 11|2w6 3r5 14|88e13
+X 15 pparaula.ads
+9K9*pparaula 11|1w6 2r5 12|2w6 3r5 15|88e13
 17I12*tllargaria{integer}
-21R9*tparaula 10|14r50 15r49 11|17r50 44r49 14|73e14
-31V13*llargaria{17I12} 11|22s27 48s27
-38V13*toString{string} 11|25s17 52s17
+21R9*tparaula 11|14r50 15r49 12|17r50 44r49 15|73e14
+31V13*llargaria{17I12} 12|22s27 48s27
+38V13*toString{string} 12|25s17 52s17
 
