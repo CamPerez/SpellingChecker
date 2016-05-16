@@ -17,7 +17,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK
 
-U diccionari_tr%b	diccionari_tr.adb	29ad052a NE OO PK IL
+U diccionari_tr%b	diccionari_tr.adb	ddaf35b2 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -32,6 +32,7 @@ W system%s		system.ads		system.ali
 W system.exception_table%s  s-exctab.adb	s-exctab.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
+<<<<<<< HEAD
 D ada.ads		20130417131022 3ffc8e18
 D a-except.ads		20130417131018 10fcae55
 D a-finali.ads		20130417131020 52ecdc1b
@@ -65,6 +66,35 @@ D s-stopoo.ads		20130417131032 7b8fbeee
 D s-traent.ads		20130417131032 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
+=======
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D a-zchara.ads		20150518132148 21c8f2b2 ada.wide_wide_characters%s
+D a-zchhan.ads		20150518132148 28d85bc4 ada.wide_wide_characters.handling%s
+D diccionari_tr.ads	20160411112322 382938bc diccionari_tr%s
+D diccionari_tr.adb	20160425102144 35260027 diccionari_tr%b
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D pparaula.ads		20160407182914 e8cdf8fd pparaula%s
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+>>>>>>> c68cbe66732d00d00f3b69aed237acc5b413c330
 X 1 ada.ads
 16K9*Ada 19e8 12|1r6 1r23
 X 7 a-textio.ads
@@ -85,6 +115,7 @@ X 11 diccionari_tr.ads
 19A9 node 20r25 28c9 12|9r17 29r21
 20P9 pnode(19A9) 24r18 32r15 12|7r13 18r13 19r13 45r13 47r10
 22R9 cell 26e17 28r38
+<<<<<<< HEAD
 24p10*punter{20P9} 12|11m18 28r22 31m25 34m22 36r23 54r38 55r23
 25b10*is_in{boolean} 12|12m18 32m25 38m16 57r39
 32p10*root{20P9} 12|7m29 18m29 45m29
@@ -94,12 +125,28 @@ X 12 diccionari_tr.adb
 18p7 root{11|20P9} 26r11 31r17 32r17
 19p7 p{11|20P9} 26m7 28r13 34r13 36m10 36r14 38r7
 19p10 r{11|20P9} 29m13 30r22 34r31
+=======
+24p10*punter{20P9} 11|11m18 28r22 31m22 34m22 36r23 54r38 55r23
+25b10*is_in{boolean} 11|12m18 32m22 38m16 57r39
+32p10*root{20P9} 11|7m29 18m29 45m29
+X 11 diccionari_tr.adb
+7p7 root{10|20P9} 9r7 10r16 11r10 12r10
+10e11 x{character} 11r15 12r15
+18p7 root{10|20P9} 26r11
+19p7 p{10|20P9} 26m7 28r13 34r13 36m10 36r14 38r7
+19p10 r{10|20P9} 29m13 30r22 31r17 32r17 34r31
+>>>>>>> c68cbe66732d00d00f3b69aed237acc5b413c330
 20e7 c{character} 26m24 28r19 34r19 36r20 36m39 38r13
 21i7 i{integer} 26m17 26r36 27r13 36m31 36r34 36r51
 22i7 llargar{integer} 23r27 27r16
 23a7 paraula{string} 25m7 26r28 36r43
+<<<<<<< HEAD
 30e17 x{character} 31r22 32r22
 45p7 root{11|20P9} 53r11
+=======
+30e17 x{character} 31r19 32r19
+45p7 root{10|20P9} 53r11
+>>>>>>> c68cbe66732d00d00f3b69aed237acc5b413c330
 46e7 c{character} 53m24 54r35 55r20 55m39 57r36
 47p7 p{11|20P9} 53m7 54r29 55m10 55r14 57r30
 48i7 llargar{integer} 49r27 54r17 57r18

@@ -5,8 +5,6 @@ package diccionari_tr is
 
    type diccionari is limited private;
 
-   --type key_component is ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
-
    bad_use: exception;
    space_overflow: exception;
 
