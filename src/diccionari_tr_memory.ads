@@ -19,10 +19,10 @@ private
 
    type node is
       record
-         kc: key_component;
+         kc: character;
          is_final: boolean;
-         parent: pnode;
-         brother: pnode;
+         child: pnode;
+         sibling: pnode;
       end record;
 
    type diccionari is

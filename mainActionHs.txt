@@ -1,0 +1,415 @@
+más - NO existeix
+fila:  1 - columna:  13
+
+montañas - NO existeix
+fila:  1 - columna:  29
+
+palabras - NO existeix
+fila:  1 - columna:  41
+
+alejados - NO existeix
+fila:  1 - columna:  51
+
+países - NO existeix
+fila:  1 - columna:  67
+
+vocales - NO existeix
+fila:  1 - columna:  81
+
+y - NO existeix
+fila:  1 - columna:  89
+
+consonantes - NO existeix
+fila:  1 - columna:  95
+
+viven - NO existeix
+fila:  1 - columna:  108
+
+textos - NO existeix
+fila:  2 - columna:  1
+
+simulados - NO existeix
+fila:  2 - columna:  9
+
+Viven - NO existeix
+fila:  2 - columna:  20
+
+aislados - NO existeix
+fila:  2 - columna:  26
+
+casas - NO existeix
+fila:  2 - columna:  38
+
+letras - NO existeix
+fila:  2 - columna:  47
+
+semántica - NO existeix
+fila:  2 - columna:  73
+
+un - NO existeix
+fila:  2 - columna:  84
+
+océano - NO existeix
+fila:  2 - columna:  92
+
+lenguas - NO existeix
+fila:  2 - columna:  102
+
+Un - NO existeix
+fila:  2 - columna:  111
+
+riachuelo - NO existeix
+fila:  3 - columna:  1
+
+Pons - NO existeix
+fila:  3 - columna:  20
+
+fluye - NO existeix
+fila:  3 - columna:  25
+
+por - NO existeix
+fila:  3 - columna:  31
+
+su - NO existeix
+fila:  3 - columna:  35
+
+pueblo - NO existeix
+fila:  3 - columna:  38
+
+y - NO existeix
+fila:  3 - columna:  45
+
+abastece - NO existeix
+fila:  3 - columna:  51
+
+normas - NO existeix
+fila:  3 - columna:  68
+
+necesarias - NO existeix
+fila:  3 - columna:  75
+
+Hablamos - NO existeix
+fila:  3 - columna:  87
+
+un - NO existeix
+fila:  3 - columna:  99
+
+país - NO existeix
+fila:  3 - columna:  102
+
+paraisomático - NO existeix
+fila:  3 - columna:  107
+
+que - NO existeix
+fila:  4 - columna:  8
+
+uno - NO existeix
+fila:  4 - columna:  14
+
+caen - NO existeix
+fila:  4 - columna:  21
+
+pedazos - NO existeix
+fila:  4 - columna:  26
+
+frases - NO existeix
+fila:  4 - columna:  37
+
+asadas - NO existeix
+fila:  4 - columna:  44
+
+Pero - NO existeix
+fila:  4 - columna:  63
+
+un - NO existeix
+fila:  4 - columna:  68
+
+una - NO existeix
+fila:  4 - columna:  81
+
+pequeña - NO existeix
+fila:  4 - columna:  85
+
+texto - NO existeix
+fila:  4 - columna:  102
+
+simulado - NO existeix
+fila:  4 - columna:  108
+
+Lorem - NO existeix
+fila:  5 - columna:  10
+
+Ipsum - NO existeix
+fila:  5 - columna:  16
+
+decidió - NO existeix
+fila:  5 - columna:  23
+
+aventurarse - NO existeix
+fila:  5 - columna:  31
+
+y - NO existeix
+fila:  5 - columna:  43
+
+salir - NO existeix
+fila:  5 - columna:  45
+
+vasto - NO existeix
+fila:  5 - columna:  54
+
+mundo - NO existeix
+fila:  5 - columna:  60
+
+Pero - NO existeix
+fila:  6 - columna:  2
+
+un - NO existeix
+fila:  6 - columna:  7
+
+una - NO existeix
+fila:  6 - columna:  20
+
+pequeña - NO existeix
+fila:  6 - columna:  24
+
+texto - NO existeix
+fila:  6 - columna:  41
+
+simulado - NO existeix
+fila:  6 - columna:  47
+
+Lorem - NO existeix
+fila:  6 - columna:  65
+
+Ipsum - NO existeix
+fila:  6 - columna:  71
+
+decidió - NO existeix
+fila:  6 - columna:  78
+
+aventurarse - NO existeix
+fila:  6 - columna:  86
+
+y - NO existeix
+fila:  6 - columna:  98
+
+salir - NO existeix
+fila:  6 - columna:  100
+
+vasto - NO existeix
+fila:  6 - columna:  109
+
+mundo - NO existeix
+fila:  6 - columna:  115
+
+Lorem - NO existeix
+fila:  7 - columna:  8
+
+más - NO existeix
+fila:  8 - columna:  13
+
+montañas - NO existeix
+fila:  8 - columna:  29
+
+palabras - NO existeix
+fila:  8 - columna:  41
+
+alejados - NO existeix
+fila:  8 - columna:  51
+
+países - NO existeix
+fila:  8 - columna:  67
+
+vocales - NO existeix
+fila:  8 - columna:  81
+
+y - NO existeix
+fila:  8 - columna:  89
+
+consonantes - NO existeix
+fila:  8 - columna:  95
+
+viven - NO existeix
+fila:  8 - columna:  108
+
+textos - NO existeix
+fila:  9 - columna:  1
+
+simulados - NO existeix
+fila:  9 - columna:  9
+
+Viven - NO existeix
+fila:  9 - columna:  20
+
+aislados - NO existeix
+fila:  9 - columna:  26
+
+casas - NO existeix
+fila:  9 - columna:  38
+
+letras - NO existeix
+fila:  9 - columna:  47
+
+semántica - NO existeix
+fila:  9 - columna:  73
+
+un - NO existeix
+fila:  9 - columna:  84
+
+océano - NO existeix
+fila:  9 - columna:  92
+
+lenguas - NO existeix
+fila:  9 - columna:  102
+
+Un - NO existeix
+fila:  9 - columna:  111
+
+riachuelo - NO existeix
+fila:  10 - columna:  1
+
+Pons - NO existeix
+fila:  10 - columna:  20
+
+fluye - NO existeix
+fila:  10 - columna:  25
+
+por - NO existeix
+fila:  10 - columna:  31
+
+su - NO existeix
+fila:  10 - columna:  35
+
+pueblo - NO existeix
+fila:  10 - columna:  38
+
+y - NO existeix
+fila:  10 - columna:  45
+
+abastece - NO existeix
+fila:  10 - columna:  51
+
+normas - NO existeix
+fila:  10 - columna:  68
+
+necesarias - NO existeix
+fila:  10 - columna:  75
+
+Hablamos - NO existeix
+fila:  10 - columna:  87
+
+un - NO existeix
+fila:  10 - columna:  99
+
+país - NO existeix
+fila:  10 - columna:  102
+
+paraisomático - NO existeix
+fila:  10 - columna:  107
+
+que - NO existeix
+fila:  11 - columna:  8
+
+uno - NO existeix
+fila:  11 - columna:  14
+
+caen - NO existeix
+fila:  11 - columna:  21
+
+pedazos - NO existeix
+fila:  11 - columna:  26
+
+frases - NO existeix
+fila:  11 - columna:  37
+
+asadas - NO existeix
+fila:  11 - columna:  44
+
+Pero - NO existeix
+fila:  11 - columna:  63
+
+un - NO existeix
+fila:  11 - columna:  68
+
+una - NO existeix
+fila:  11 - columna:  81
+
+pequeña - NO existeix
+fila:  11 - columna:  85
+
+texto - NO existeix
+fila:  11 - columna:  102
+
+simulado - NO existeix
+fila:  11 - columna:  108
+
+Lorem - NO existeix
+fila:  12 - columna:  10
+
+Ipsum - NO existeix
+fila:  12 - columna:  16
+
+decidió - NO existeix
+fila:  12 - columna:  23
+
+aventurarse - NO existeix
+fila:  12 - columna:  31
+
+y - NO existeix
+fila:  12 - columna:  43
+
+salir - NO existeix
+fila:  12 - columna:  45
+
+vasto - NO existeix
+fila:  12 - columna:  54
+
+mundo - NO existeix
+fila:  12 - columna:  60
+
+Pero - NO existeix
+fila:  13 - columna:  2
+
+un - NO existeix
+fila:  13 - columna:  7
+
+una - NO existeix
+fila:  13 - columna:  20
+
+pequeña - NO existeix
+fila:  13 - columna:  24
+
+texto - NO existeix
+fila:  13 - columna:  41
+
+simulado - NO existeix
+fila:  13 - columna:  47
+
+Lorem - NO existeix
+fila:  13 - columna:  65
+
+Ipsum - NO existeix
+fila:  13 - columna:  71
+
+decidió - NO existeix
+fila:  13 - columna:  78
+
+aventurarse - NO existeix
+fila:  13 - columna:  86
+
+y - NO existeix
+fila:  13 - columna:  98
+
+salir - NO existeix
+fila:  13 - columna:  100
+
+vasto - NO existeix
+fila:  13 - columna:  109
+
+mundo - NO existeix
+fila:  13 - columna:  115
+
+Lorem - NO existeix
+fila:  14 - columna:  8
+
+El fitxer acaba aquí

@@ -1,0 +1,112 @@
+V "GNAT Lib v2015"
+A -gnatA
+A -mtune=generic
+A -march=pentiumpro
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U diccionari_tr_memory%b  diccionari_tr_memory.adb  3f83f1b5 NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W pparaula%s		pparaula.adb		pparaula.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U diccionari_tr_memory%s  diccionari_tr_memory.ads  2f47ac2a EE OO PK IL
+W ada.tags%s		a-tags.adb		a-tags.ali
+W pparaula%s		pparaula.adb		pparaula.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D a-zchara.ads		20150518132148 21c8f2b2 ada.wide_wide_characters%s
+D a-zchhan.ads		20150518132148 28d85bc4 ada.wide_wide_characters.handling%s
+D diccionari_tr_memory.ads  20160529172122 9d68463e diccionari_tr_memory%s
+D diccionari_tr_memory.adb  20160612162936 28a9a84b diccionari_tr_memory%b
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D pparaula.ads		20160613193836 b22fea14 pparaula%s
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 11|1r6 1r23
+X 6 a-textio.ads
+49K13*Text_IO 471e16 11|1w10 1r27
+X 10 diccionari_tr_memory.ads
+4K9*diccionari_tr_memory 17E9 33l5 33e25 11|4b14 96l5 96t25
+6R9*diccionari 11r27 12r30 13r29 28c9 31e17 11|6r27 13r30 68r29
+8X4*bad_use
+9X4*space_overflow 11|64r38
+11U14*buit 11<20 11|6b14 10l8 10t12
+11r20 d{6R9} 11|6b20 7m27 7r27
+12U14*posa 12=20 12>42 11|13b14 65l8 65t12
+12r20 d{6R9} 11|13b20 14m27 14r27
+12r42 par{14|21R9} 11|13b42 18r37 23r26
+13V13*existeix{boolean} 13>23 13>41 11|68b13 94l8 94t16
+13r23 d{6R9} 11|68b23 69r27
+13r41 par{14|21R9} 11|68b41 72r37 75r26
+17R9 node 18r25 20c9 26e17 11|28r18 43r24 55r21
+18P9 pnode(17R9) 24r17 25r19 30r15 11|7r13 14r13 15r13 69r13 70r10
+22e10*kc{character} 11|38r21 42r37 83r18 86r54 89r34
+23b10*is_final{boolean} 11|62m9 86r34
+24p10*child{18P9} 11|48r18 49r21 57m15 90r15 91r16
+25p10*sibling{18P9} 11|38r33 39r21 42r18 45m18 83r30 84r19 89r15
+30p10*root{18P9} 11|7m29 14m29 69m29
+X 11 diccionari_tr_memory.adb
+7p7 root{10|18P9} 9r7
+14p7 root{10|18P9} 22r10 30r10
+15p7 p{10|18P9} 22m7 27r10 31m10 38r19 38r31 39m16 39r19 42r16 42r35 45r16
+. 46m16 48r16 49m16 49r19 57r13 58m13 62r7
+15p10 r{10|18P9} 28m10 29r10 30r16 31r13 43m16 44r16 45r28 46r19 55m13 56r13
+. 57r22 58r16
+16e7 c{character} 26m7 29r18 36m10 38r25 42r41 44r24 56r21
+17i7 i{integer} 25m7 26r18 32m10 32r13 35r13 36r21 60m10 60r13
+18i7 llargar{integer} 19r27 35r17
+19a7 paraula{string} 23m7 26r10 36r13
+20b7 is_desc{boolean} 24m7 33m10 37r17 50m16 52m16
+69p7 root{10|18P9} 76r11
+70p7 p{10|18P9} 76m7 77r10 83r16 83r28 84m13 84r17 86r32 86r52 89r13 89r32
+. 90r13 91m10 91r14
+71e7 c{character} 82m10 83r22 86r57 89r38
+72i7 llargar{integer} 73r27 81r19 86r15
+73a7 paraula{string} 75m7 82r14
+81i11 i{integer} 82r22 86r13
+X 14 pparaula.ads
+9K9*pparaula 10|1w6 2r5 11|2w6 3r5 14|110e13
+17I12*tllargaria{integer}
+21R9*tparaula 10|12r50 13r49 11|13r50 68r49 14|93e14
+33V13*llargaria{17I12} 11|18s27 72s27
+40V13*toString{string} 11|23s17 75s17
+

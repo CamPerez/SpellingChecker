@@ -15,9 +15,9 @@ package body diccionari_simple is
    begin
       if not existeix(d, p) then
          n:= n+1; a(n):=p;
-      end if;      
+      end if;
    exception
-         when storage_error => raise space_overflow;      
+         when storage_error => raise space_overflow;
    end posa;
 
 
@@ -27,8 +27,8 @@ package body diccionari_simple is
    begin
       for x in a'Range loop
          if a(x)=p then
-            return true;            
-         end if;         
+            return true;
+         end if;
       end loop;
       return false;
    end existeix;

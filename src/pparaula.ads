@@ -20,6 +20,8 @@ package pparaula is
    -- Definició del tipus tparaula.
    type tparaula is private;
 
+   type mapping is limited private;
+
    -- Procediment per escriure a la pantalla
    procedure put(p : in tparaula);
    -- Procediment per escriure a un fitxer de text
@@ -54,9 +56,27 @@ package pparaula is
    -- Procediment per tancar l'origen de les paraules
    procedure close(origen : in out OrigenParaules);
    -- Procediment per llegir una paraula des d'un origen de paraules
-   procedure get(origen : in out OrigenParaules; p: out tparaula; fila: out integer; columna: out integer);
+   procedure get(origen : in out OrigenParaules; p: out tparaula; fila: out integer; columna: out integer; map: in mapping);
    -- Procediment per reiniciar la columna des d'un origen de paraules
    procedure reiniciarColumna(origen : in out OrigenParaules);
+   -- Procediment per reiniciar la fila des d'un origen de paraules
+   procedure reiniciarFila(origen : in out OrigenParaules);
+
+
+   type key is ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+               'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+               'ñ', 'Ñ',
+               'á', 'à', 'é', 'è', 'í', 'ó', 'ò', 'ú',
+               'ä', 'ë','ï', 'ö', 'ü',
+               'â', 'ê','î', 'ô', 'û',
+               'Á', 'À', 'É', 'È', 'Í', 'Ó', 'Ò', 'Ú',
+               'Ä', 'Ë', 'Ï', 'Ö', 'Ü',
+               'Â', 'Ê', 'Î', 'Ô', 'Û');
+
+
+
+   procedure create_mapping(map: in out mapping);
+   function get_key(c: in character; map: in mapping) return integer;
 
    private
    --------------------------------------------------------------
@@ -84,5 +104,7 @@ package pparaula is
       f: integer:=0; --fila
       c: integer:=0; --columna
    end record;
+
+   type mapping is array(character) of integer;
 
 end pparaula;

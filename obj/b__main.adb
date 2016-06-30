@@ -7,24 +7,28 @@ with Ada.Exceptions;
 package body ada_main is
    pragma Warnings (Off);
 
-   E080 : Short_Integer; pragma Import (Ada, E080, "system__os_lib_E");
+   E084 : Short_Integer; pragma Import (Ada, E084, "system__os_lib_E");
    E013 : Short_Integer; pragma Import (Ada, E013, "system__soft_links_E");
    E023 : Short_Integer; pragma Import (Ada, E023, "system__exception_table_E");
-   E069 : Short_Integer; pragma Import (Ada, E069, "ada__io_exceptions_E");
-   E053 : Short_Integer; pragma Import (Ada, E053, "ada__tags_E");
-   E068 : Short_Integer; pragma Import (Ada, E068, "ada__streams_E");
+   E052 : Short_Integer; pragma Import (Ada, E052, "ada__containers_E");
+   E073 : Short_Integer; pragma Import (Ada, E073, "ada__io_exceptions_E");
+   E053 : Short_Integer; pragma Import (Ada, E053, "ada__strings_E");
+   E059 : Short_Integer; pragma Import (Ada, E059, "ada__tags_E");
+   E072 : Short_Integer; pragma Import (Ada, E072, "ada__streams_E");
    E045 : Short_Integer; pragma Import (Ada, E045, "interfaces__c_E");
    E025 : Short_Integer; pragma Import (Ada, E025, "system__exceptions_E");
-   E083 : Short_Integer; pragma Import (Ada, E083, "system__file_control_block_E");
-   E074 : Short_Integer; pragma Import (Ada, E074, "system__file_io_E");
-   E078 : Short_Integer; pragma Import (Ada, E078, "system__finalization_root_E");
-   E076 : Short_Integer; pragma Import (Ada, E076, "ada__finalization_E");
+   E087 : Short_Integer; pragma Import (Ada, E087, "system__file_control_block_E");
+   E078 : Short_Integer; pragma Import (Ada, E078, "system__file_io_E");
+   E082 : Short_Integer; pragma Import (Ada, E082, "system__finalization_root_E");
+   E080 : Short_Integer; pragma Import (Ada, E080, "ada__finalization_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__calendar_E");
    E017 : Short_Integer; pragma Import (Ada, E017, "system__secondary_stack_E");
-   E066 : Short_Integer; pragma Import (Ada, E066, "ada__text_io_E");
-   E087 : Short_Integer; pragma Import (Ada, E087, "pparaula_E");
-   E085 : Short_Integer; pragma Import (Ada, E085, "diccionari_simple_E");
-   E096 : Short_Integer; pragma Import (Ada, E096, "diccionari_tr_E");
+   E070 : Short_Integer; pragma Import (Ada, E070, "ada__text_io_E");
+   E093 : Short_Integer; pragma Import (Ada, E093, "pparaula_E");
+   E104 : Short_Integer; pragma Import (Ada, E104, "diccionari_simple_E");
+   E095 : Short_Integer; pragma Import (Ada, E095, "diccionari_tr_E");
+   E091 : Short_Integer; pragma Import (Ada, E091, "diccionari_tr_memory_E");
+   E089 : Short_Integer; pragma Import (Ada, E089, "diccionari_hs_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
    Local_Interrupt_States : constant String := "";
@@ -33,7 +37,7 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E066 := E066 - 1;
+      E070 := E070 - 1;
       declare
          procedure F1;
          pragma Import (Ada, F1, "ada__text_io__finalize_spec");
@@ -44,7 +48,7 @@ package body ada_main is
          procedure F2;
          pragma Import (Ada, F2, "system__file_io__finalize_body");
       begin
-         E074 := E074 - 1;
+         E078 := E078 - 1;
          F2;
       end;
       declare
@@ -139,41 +143,48 @@ package body ada_main is
       System.Soft_Links'Elab_Spec;
       System.Exception_Table'Elab_Body;
       E023 := E023 + 1;
+      Ada.Containers'Elab_Spec;
+      E052 := E052 + 1;
       Ada.Io_Exceptions'Elab_Spec;
-      E069 := E069 + 1;
+      E073 := E073 + 1;
+      Ada.Strings'Elab_Spec;
+      E053 := E053 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Streams'Elab_Spec;
-      E068 := E068 + 1;
+      E072 := E072 + 1;
       Interfaces.C'Elab_Spec;
       System.Exceptions'Elab_Spec;
       E025 := E025 + 1;
       System.File_Control_Block'Elab_Spec;
-      E083 := E083 + 1;
+      E087 := E087 + 1;
       System.Finalization_Root'Elab_Spec;
-      E078 := E078 + 1;
+      E082 := E082 + 1;
       Ada.Finalization'Elab_Spec;
-      E076 := E076 + 1;
+      E080 := E080 + 1;
       Ada.Calendar'Elab_Spec;
       Ada.Calendar'Elab_Body;
       E006 := E006 + 1;
       System.File_Io'Elab_Body;
-      E074 := E074 + 1;
+      E078 := E078 + 1;
       E045 := E045 + 1;
       Ada.Tags'Elab_Body;
-      E053 := E053 + 1;
+      E059 := E059 + 1;
       System.Soft_Links'Elab_Body;
       E013 := E013 + 1;
       System.Os_Lib'Elab_Body;
-      E080 := E080 + 1;
+      E084 := E084 + 1;
       System.Secondary_Stack'Elab_Body;
       E017 := E017 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
-      E066 := E066 + 1;
-      E087 := E087 + 1;
-      E085 := E085 + 1;
+      E070 := E070 + 1;
+      E104 := E104 + 1;
       diccionari_tr'elab_spec;
-      E096 := E096 + 1;
+      E095 := E095 + 1;
+      E093 := E093 + 1;
+      diccionari_tr_memory'elab_spec;
+      E091 := E091 + 1;
+      E089 := E089 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -209,9 +220,11 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\Usuario\Desktop\SpellingChecker\obj\pparaula.o
    --   C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_simple.o
    --   C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_tr.o
+   --   C:\Users\Usuario\Desktop\SpellingChecker\obj\pparaula.o
+   --   C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_tr_memory.o
+   --   C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_hs.o
    --   C:\Users\Usuario\Desktop\SpellingChecker\obj\main.o
    --   -LC:\Users\Usuario\Desktop\SpellingChecker\obj\
    --   -LC:\Users\Usuario\Desktop\SpellingChecker\obj\

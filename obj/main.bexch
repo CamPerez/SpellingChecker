@@ -4,9 +4,11 @@ b__main.o
 C:\Users\Usuario\Desktop\SpellingChecker\diccionario.gpr
 20160317214942
 [BOUND OBJECT FILES]
-C:\Users\Usuario\Desktop\SpellingChecker\obj\pparaula.o
 C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_simple.o
 C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_tr.o
+C:\Users\Usuario\Desktop\SpellingChecker\obj\pparaula.o
+C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_tr_memory.o
+C:\Users\Usuario\Desktop\SpellingChecker\obj\diccionari_hs.o
 C:\Users\Usuario\Desktop\SpellingChecker\obj\main.o
 [GENERATED SOURCE FILES]
 b__main.ads
